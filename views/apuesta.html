@@ -1,0 +1,48 @@
+<div class="divApuesta">
+	<h3>Tu porra</h3>
+	<div class="divFormApuesta">
+		<div id="div_pais_1" class="divNombre nomAbrev_1"></div>
+		<div id="div_abreviatura_1" class="divAbreviatura nomAbrev_1"></div>
+		<div class="divBandera">
+			<img id="bandera_1"/>
+		</div>
+		<div class="div_vs">VS</div>
+		<div class="divBandera">
+			<img id="bandera_2"/>
+		</div>
+		<div id="div_abreviatura_2" class="divAbreviatura nomAbrev_2"></div>
+		<div id="div_pais_2" class="divNombre nomAbrev_2"></div>
+		<div class="divInputApuesta_1 divInputApuesta">
+			<input id="inputApuesta_1" type="number" min="0" step="1">
+		</div>
+		<div class="divInputApuesta_2 divInputApuesta">
+			<input id="inputApuesta_2" type="number" min="0" step="1">
+		</div>
+	</div>
+	<p class="contdowr">La porra se cierra en: <span id="countdown-timer"></span></p>
+	<button id="bttnApostar" class="button">Apostar</button>
+</div>
+<script type="text/javascript">
+	var fechaPartido = new Date("2022-11-20 17:00");
+
+	if(fechaPartido < new Date().getTime()){
+		$("#bttnApostar").hide();
+	}
+
+	var intervalCountDownFechaPartido = setInterval(() => {
+		var now = new Date().getTime();
+
+		var distance = fechaPartido - now;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		$("#countdown-timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+
+		if (distance < 0) {
+			clearInterval(intervalCountDownFechaPartido);
+			$("#countdown-timer").text("Ya no puedes editar tu porra, el partido ha comenzado");
+		}
+	}, 1000);
+</script>

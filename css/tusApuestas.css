@@ -1,0 +1,163 @@
+h1{
+	text-align: center;
+	padding: 2% 0;
+}
+
+.select{
+	margin: auto;
+	min-width: 140px;
+	width: 20%;
+	height: 30px;
+}
+
+.select select{
+	width: 100%;
+	height: 100%;
+	font-size: 17px;
+}
+
+.divPartidosGrupo{
+	padding: 0 0 1% 0;
+}
+
+.divPartidosGrupo h2{
+	padding: 1%;
+}
+
+.divContenedorTabla .divPartidos{
+	display: grid;
+	grid-template-columns: 2fr 3fr 1fr 3fr 1fr 1fr 1fr 1fr 3fr 1fr;
+}
+
+
+.divContenedorTabla .divPartidos div {
+	border: solid 1px;
+	border-color: #202020;
+	text-align: center;
+	padding: 2% 1%;
+}
+
+.divBandera, .divBoton, .divFecha, .divApuesta, .divResultado, .divNombre{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button{
+	/*border: solid 1px;*/
+	width: 60%;
+	margin: 1%;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px 1px #2e2e2e;
+	padding: 3% 5%;
+	font-size: 0.9em;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.button:hover{
+	background-color: rgba(150,150,150,0.5);
+}
+
+.button:active{
+	top: 2px;
+	box-shadow: rgb(88, 88, 88) 0px 0px 0px 0px;
+}
+
+
+.divAbreviatura{
+	display: none;
+}
+
+.divBandera img {
+	width: 25px;
+}
+
+@media(max-width: 900px){
+	.select{
+		width: 25%;
+	}
+}
+
+@media(max-width: 750px){
+	.button{
+		/*border: solid 1px;*/
+		width: 80%;
+		margin: 0.5%;
+		box-shadow: 1px 1px 1px 1px #2e2e2e;
+		padding: 3% 5%;
+		font-size: 0.9em;
+		font-weight: normal;
+		cursor: pointer;
+	}
+	.divContenedorTabla h1{
+		font-size:1.8em;	
+	}
+}
+
+@media(max-width: 700px){
+	.select{
+		width: 30%;
+	}
+	.select select{
+		font-size: 16px;
+	}
+	.divContenedorTabla{
+		width: 92%;
+	}
+	.divContenedorTabla .divPartidos{
+		display: grid;
+		grid-template-columns: 2fr 3fr 1fr 2fr 1fr 1fr 1fr 1fr 2+fr 1fr;
+	}
+	.divPartidos div{
+		font-size: 0.9em;
+	}
+	.divNombre{
+		display: none;
+	}
+	.divAbreviatura{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.divPartidosGrupo h2{
+		font-size: 1.4em;
+	}
+}
+
+@media(max-width: 600px){
+	.select{
+		width: 35%;
+	}
+	.select select{
+		font-size: 15px;
+	}
+	.divContenedorTabla h1{
+		font-size:1.6em;	
+	}
+	.divPartidosGrupo h2{
+		font-size: 1.3em;
+	}
+}
+
+@media(max-width: 500px){
+	.select{
+		width: 50%;
+	}
+	.select select{
+		font-size: 14px;
+	}
+	.divContenedorTabla .divPartidos{
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr 1fr 1fr 1fr 1fr 2fr 1fr;
+	}
+	.divFecha{
+		display: none;
+	}
+	.divContenedorTabla h1{
+		font-size:1.5em;	
+	}
+	.divPartidosGrupo h2{
+		font-size: 1.2em;
+	}
+}
