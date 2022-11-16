@@ -13,21 +13,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../css/body.css"/>
-	<!--<link rel="stylesheet" type="text/css" href="../css/indexInicio.css">-->
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
-	<!--<link rel="stylesheet" type="text/css" href="../css/tablaPartidos.css">-->
+	<link rel="stylesheet" type="text/css" href="../css/registrarse.css">
 </head>
 <body>
 	<nav class="nav-menu" id="menu"></nav>
-
 	<?php
 	include "../views/formRegistrarse.html";
 	?>
-	
 	<script type="text/javascript" src="../views/menu.js"></script>
 	<script type="text/javascript" src="registrarse.js"></script>
-	<!--<script type="text/javascript" src="../views/partidos.js"></script>-->
 	<script type="text/javascript" src="validarFormularios.js"></script>
-	<!--<script type="text/javascript" src="controllers/ajustarVistas.js"></script>-->
 </body>
 </html>

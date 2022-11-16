@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION["id"])){
 	$id = $_SESSION["id"];
-	include_once "../db/db.php";
+	include_once "db/db.php";
 
 	$sql = "SELECT nombre,puntuacion,email from personas where id=$id";
 
