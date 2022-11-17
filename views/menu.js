@@ -23,3 +23,5 @@ $("#menu").append(
 			.text("Clasificacion")
 		)
 	);
+
+$("div a img").hide();

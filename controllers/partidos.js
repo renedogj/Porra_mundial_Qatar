@@ -1,15 +1,19 @@
-var grupos = ["A","B","C","D","E","F","G","H"];
-var partidosGrupos = [];
+var grupos = ["A","B","C","D","E","F","G","H","2","3","4","5","6"];
+var partidosGrupos = [new Array(),new Array];
 var partidos = [];
 $.ajax({
 	method: "POST",
 	url: "../models/obtenerPartidosApuestas.php",
 	success: function(result){
-		console.log(result);
+		//console.log(result);
 		partidos = result
 
 		for (grupo of grupos){
-			partidosGrupos[grupo] = partidos.filter(comprobarGrupo,grupo);
+			if(isNaN(grupo)){
+				partidosGrupos[0][grupo] = partidos.filter(comprobarGrupo,grupo);
+			}else{
+				partidosGrupos[1][grupo] = partidos.filter(comprobarGrupo,grupo);
+			}
 		}
 		mostrarPartidosPorGrupos(partidosGrupos);
 		mostrarPartidosPorFecha(partidos);
@@ -27,6 +31,8 @@ function comprobarGrupo(partido, index, partidos){
 			return partido.grupo_1 == this
 		}
 		return false;
+	}else{
+		return partido.faseGrupos = this;
 	}
 	return false;
 }
