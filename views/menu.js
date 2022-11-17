@@ -24,4 +24,6 @@ $("#menu").append(
 		)
 	);
 
-$("div a img").hide();
+$(document).ready(() => {
+	$("div a img").hide();
+})

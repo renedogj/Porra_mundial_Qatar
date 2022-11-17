@@ -1,26 +1,24 @@
 function mostrarPartidosPorGrupos(partidos){
-	console.log(partidos);
 	for(partidosGrupos of partidos){
-		console.log(partidosGrupos)
 		for (grupo in partidosGrupos){
-			console.log(grupo)
-			let textoGrupo = "Grupo " + grupo;
-			if(!isNaN(grupo)){
-				textoGrupo = nombrarClasificatoria(grupo);
+			if(partidosGrupos[grupo].length != 0){
+				let textoGrupo = "Grupo " + grupo;
+				if(!isNaN(grupo)){
+					textoGrupo = nombrarClasificatoria(grupo);
+				}
+				$("#divPartidosPorGrupos").append(
+					$("<div>").attr("id","divPartidosGrupo-"+grupo).addClass("divPartidosGrupo").append(
+						$("<h2>").text(textoGrupo),
+						$("<div>").attr("id","tablePartidosGrupo-"+grupo)
+					)
+				);
 			}
-			$("#divPartidosPorGrupos").append(
-				$("<div>").attr("id","divPartidosGrupo-"+grupo).addClass("divPartidosGrupo").append(
-					$("<h2>").text(textoGrupo),
-					$("<div>").attr("id","tablePartidosGrupo-"+grupo)
-				)
-			);
 			for (partido of partidosGrupos[grupo]){
 				partido = validarNulos(partido);
 				let idPartido = partido.id;
 				$("#tablePartidosGrupo-"+grupo).addClass("divPartidos").append(
 					$("<div>").addClass("divBoton").append(
 						$("<button>").addClass("button").attr("id","botonVotar-"+idPartido).text("Vota").click(() => {
-							console.log(idPartido);
 							window.location.assign("apuesta.php?idPartido="+idPartido);
 						})
 					),

@@ -21,10 +21,9 @@ if(!isset($_SESSION["id"])){
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../css/body.css"/>
-	<!--<link rel="stylesheet" type="text/css" href="../css/indexInicio.css">-->
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
 	<link rel="stylesheet" type="text/css" href="../css/tablas.css">
-	<link rel="stylesheet" type="text/css" href="../css/tusApuestas.css">
+	<link rel="stylesheet" type="text/css" href="../css/partidos.css">
 </head>
 <body>
 	<nav class="nav-menu" id="menu"></nav>

@@ -5,7 +5,6 @@ $.ajax({
 	method: "POST",
 	url: "../models/obtenerPartidosApuestas.php",
 	success: function(result){
-		//console.log(result);
 		partidos = result
 
 		for (grupo of grupos){
