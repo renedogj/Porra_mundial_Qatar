@@ -14,7 +14,7 @@ $("#menu").append(
 		),
 	$("<div>").addClass("div-menu-item").append(
 		$("<a>")
-			.attr("href",controllers+"tusApuestas.php")
+			.attr("href",controllers+"partidos.php")
 			.text("Partidos")
 		),
 	$("<div>").addClass("div-menu-item").append(
