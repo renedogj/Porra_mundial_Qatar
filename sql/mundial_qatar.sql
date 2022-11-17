@@ -103,7 +103,7 @@ ALTER TABLE `apuestas`
   ADD CONSTRAINT `apuesta_partido_fk` FOREIGN KEY (`id_partido`) REFERENCES `partidos` (`id`),
   ADD CONSTRAINT `apuesta_persona_fk` FOREIGN KEY (`id_persona`) REFERENCES `personas` (`id`);
 
---
+--  
 -- Filtros para la tabla `partidos`
 --
 ALTER TABLE `partidos`
