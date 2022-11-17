@@ -21,7 +21,6 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>-->
 
 	<link rel="stylesheet" type="text/css" href="../css/body.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
@@ -37,7 +36,5 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 	?>
 	<script type="text/javascript" src="../views/menu.js"></script>
 	<script type="text/javascript" src="apuesta.js"></script>
-	<!--<script type="text/javascript" src="validarFormularios.js"></script>-->
-	<!--<script type="text/javascript" src="controllers/ajustarVistas.js"></script>-->
 </body>
 </html>

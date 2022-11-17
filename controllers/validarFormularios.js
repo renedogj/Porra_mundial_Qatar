@@ -3,7 +3,8 @@ $(document).ready(function(){
 		rules:{
 			inputEmail:{
 				required: true,
-				email: true
+				email: true,
+				maxlength: 40
 			},
 			inputPassword:{
 				required: true
@@ -24,7 +25,8 @@ $(document).ready(function(){
 		rules:{
 			inputEmail:{
 				required: true,
-				email: true
+				email: true,
+				maxlength: 40
 			},
 			inputNombre:{
 				required: true,

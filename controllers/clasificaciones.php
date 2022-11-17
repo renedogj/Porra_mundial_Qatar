@@ -19,7 +19,6 @@ if(!isset($_SESSION["id"])){
 	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>-->
 
 	<link rel="stylesheet" type="text/css" href="../css/body.css"/>
 	<!--<link rel="stylesheet" type="text/css" href="../css/indexInicio.css">-->
