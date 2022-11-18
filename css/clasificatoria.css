@@ -1,0 +1,53 @@
+.divContenedoraInputPuesto{
+	width: 90%;
+	margin: 1% 5%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 60px;
+}
+
+.divInput_1_2_puesto{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 60px;
+}
+
+.divInput_3_4_puesto{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 60px;
+}
+
+.divInputPuesto{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.divInputPuesto label{
+	text-align: center;
+	padding: 1% 0 3% 0;
+	font-size: 1.3em;
+}
+
+.selectPaises{
+	width: 100%;
+	height: 100%;
+	font-size: 17px;
+	padding: 2%;
+}
+
+.button{
+	width: 30%;
+	margin: 2% 35%;
+	padding: 1%;
+}
+
+@media(max-width: 500px){
+	.button{
+		margin: 4% 35%;
+	}
+}
