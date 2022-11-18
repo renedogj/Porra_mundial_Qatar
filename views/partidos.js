@@ -46,10 +46,11 @@ function mostrarPartidosPorGrupos(partidos){
 function mostrarPartidosPorFecha(partidos){
 	for (partido of partidos){
 		partido = validarNulos(partido);
+		let idPartido = partido.id;
 		$("#divTablaPartidosPorFecha").addClass("divPartidos").append(
 			$("<div>").addClass("divBoton").append(
 				$("<button>").addClass("button").text("Vota").click(() => {
-					window.location.assign("apuesta.php?idPartido="+partido.id);
+					window.location.assign("apuesta.php?idPartido="+idPartido);
 				})
 			),
 			$("<div>").addClass("divFecha").text(partido.fecha),

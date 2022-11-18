@@ -32,7 +32,7 @@ if(!isset($_SESSION["id"])){
 		<div class="divInputPuesto">
 			<label for="puesto_1">Primer puesto</label>
 			<select id="puesto_1" name="puesto_1" class="selectPaises">
-				<option style="background-image:url('../img/banderas/ESP.webp');">--</option>
+				<option>--</option>
 			</select>
 		</div>
 		<div class="divInputPuesto">
