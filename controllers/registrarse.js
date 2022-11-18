@@ -11,7 +11,6 @@ $("#formRegistrarse").submit(() => {
 			url: "../models/registrarse.php",
 			data: datosRegistrarse,
 			success: function(result){
-				console.log(result)
 				if(!result.error){
 					window.location.assign("../")
 				}else{

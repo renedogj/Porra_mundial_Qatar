@@ -28,10 +28,11 @@ if(!isset($_SESSION["id"])){
 <body>
 	<nav class="nav-menu" id="menu"></nav>
 	<h1>Partidos Mundial Qatar 2022</h1>
+	<h3>¡La porra de cada partido se cierra al comienzo del mismo!</h3>
 	<div class="select">
 		<select name="selectDisplay" id="selectDisplay">
-			<option value="grupo">Partidos por grupo</option>
 			<option value="fecha">Partidos por fecha</option>
+			<option value="grupo">Partidos por grupo</option>
 		</select>
 	</div>
 	<div id="divPartidosPorGrupos" class="divContenedorTabla"></div>
