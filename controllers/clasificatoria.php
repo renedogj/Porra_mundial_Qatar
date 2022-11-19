@@ -29,6 +29,7 @@ if(!isset($_SESSION["id"])){
 <body>
 	<nav class="nav-menu" id="menu"></nav>
 	<h1>Porra clasificación mundial Qatar 2022</h1>
+	<h3>La votación se cierra en: <span id="countdown-timer"></span></h3>
 	<div class="divContenedoraInputPuesto">
 		<div class="divInput_1_2_puesto">
 			<div class="divInputPuesto">

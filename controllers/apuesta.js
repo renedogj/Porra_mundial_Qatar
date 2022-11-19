@@ -41,7 +41,7 @@ $("#bttnApostar").click(() => {
 			success: function(result){
 				console.log(result);
 				if(!result.error){
-					window.location.assign("tusApuestas.php");
+					window.location.assign("partidos.php");
 				}else{
 					alert("Se ha producido un error al guardar tu porra");
 				}

@@ -16,13 +16,15 @@ $.ajax({
 	error(xhr,status,error){
 		console.log(error)
 	},
-	dataType: "json"
+	dataType: "json",
+	async: false
 });
 
 $.ajax({
 	method: "POST",
 	url: "../models/clasificatoria.php",
 	success: function(result){
+		console.log(result);
 		if(result.length != 0){
 			$("#puesto_1").val(result[0].puesto_1);
 			$("#puesto_2").val(result[0].puesto_2);
@@ -88,3 +90,20 @@ function hayRepetidos(val1,val2,val3,val4){
 	}
 	return false;
 }
+
+var intervalCountDownFechaPartido = setInterval(() => {
+	var now = new Date().getTime();
+
+	var distance = fechaInicioMundial - now;
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	$("#countdown-timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+
+	if (distance < 0) {
+		clearInterval(intervalCountDownFechaPartido);
+		$("#countdown-timer").text("Ya no puedes editar tu porra, el partido ha comenzado");
+	}
+}, 1000);

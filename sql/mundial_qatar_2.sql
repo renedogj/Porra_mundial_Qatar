@@ -243,6 +243,10 @@ CREATE TRIGGER `actualizar_apuestas` AFTER UPDATE ON `partidos` FOR EACH ROW BEG
 		SET @ganador_es := 2;
 	END IF;
 
+  IF (OLD.faseGrupos = 1) THEN
+    CALL actualizar_paises(OLD.id_pais_1,OLD.id_pais_2,@ganador_es,NEW.resultado_1,NEW.resultado_2);  
+  END IF;
+
 	OPEN cursor_apuestas;
 	SET @finished := 0;
 	cursor_loop: LOOP

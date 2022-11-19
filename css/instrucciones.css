@@ -1,0 +1,32 @@
+.divContenidoIntrucciones{
+	width: 80%;
+	margin: 1% auto;
+	text-align: justify;
+}
+
+.divContenidoIntrucciones a:hover{
+	color: #EEEEE4;
+}
+
+.textoIncial{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+ol{
+	padding: 1% 2%;
+	font-size: 1em;
+}
+
+ol li{
+	padding: 1%;
+}
+
+ul{
+	padding: 1%;
+}
+
+ul li{
+	list-style-position: outside;
+	padding: 1% 2%;
+}
