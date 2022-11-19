@@ -6,6 +6,10 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 	header("Location: ../");
 	die();
 }else{
+	if($_SESSION["id"] != 1 || $_SESSION["id"] != 2){
+		header("Location: partidos.php");
+		die();
+	}
 	$idPartido = $_GET["idPartido"];
 }
 ?>
@@ -32,14 +36,9 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 	</script>
 	<nav class="nav-menu" id="menu"></nav>
 	<?php
-	include "../views/apuesta.html";
+	include "../views/guardarResultado.html";
 	?>
 	<script type="text/javascript" src="../views/menu.js"></script>
-	<script type="text/javascript" src="apuesta.js"></script>
-	<?php
-	if($_SESSION["id"] == 1 || $_SESSION["id"] == 2){
-		include "../views/irGuardarResultado.html";
-	}
-	?>
+	<script type="text/javascript" src="guardarResultado.js"></script>
 </body>
 </html>

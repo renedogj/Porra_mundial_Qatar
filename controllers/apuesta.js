@@ -33,24 +33,27 @@ $("#bttnApostar").click(() => {
 		datos["idApuesta"] = partido.idApuesta;
 		datos["apuesta1"] = $("#inputApuesta_1").val();
 		datos["apuesta2"] = $("#inputApuesta_2").val();
-
-		$.ajax({
-			method: "POST",
-			url: "../models/apostar.php",
-			data: datos,
-			success: function(result){
-				console.log(result);
-				if(!result.error){
-					window.location.assign("partidos.php");
-				}else{
-					alert("Se ha producido un error al guardar tu porra");
-				}
-			},
-			error(xhr,status,error){
-				console.log(error)
-			},
-			dataType: "json"
-		});
+		if(validarDatos(datos)){
+			$.ajax({
+				method: "POST",
+				url: "../models/apostar.php",
+				data: datos,
+				success: function(result){
+					console.log(result);
+					if(!result.error){
+						window.location.assign("partidos.php");
+					}else{
+						alert("Se ha producido un error al guardar tu porra");
+					}
+				},
+				error(xhr,status,error){
+					console.log(error)
+				},
+				dataType: "json"
+			});
+		}else{
+			alert("Los datos introducidos no son correctos");
+		}
 	}else{
 		alert("La porra de este partido esta cerrada, lo siento");
 	}
@@ -69,10 +72,20 @@ var intervalCountDownFechaPartido = setInterval(() => {
 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-	$("#countdown-timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
-
 	if (distance < 0) {
 		clearInterval(intervalCountDownFechaPartido);
-		$("#countdown-timer").text("Ya no puedes editar tu porra, el partido ha comenzado");
+		$("#countdown-timer").text("");
+		$(".contdown").text("Ya no puedes editar tu porra, el partido ya ha comenzado");
+	}else{
+		$("#countdown-timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
 	}
 }, 1000);
+
+function validarDatos(datos){
+	let apuesta1 = datos["apuesta1"];
+	let apuesta2 = datos["apuesta2"];
+	if(!isNaN(apuesta1) || !isNaN(apuesta2)){
+		return (/^[0-9]{1,3}$/.test(apuesta1) && /^[0-9]{1,3}$/.test(apuesta2));
+	}
+	return false;
+}

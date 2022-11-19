@@ -8,7 +8,7 @@ $sql = "SELECT
 	nombre,
 	puntuacion
 	FROM personas
-	ORDER BY puntuacion DESC";
+	ORDER BY puntuacion DESC,id ASC";
 
 $json["clasificacion"] = obtenerArraySQL($conexion, $sql);
 $json["id"] = $_SESSION["id"];

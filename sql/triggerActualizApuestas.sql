@@ -61,7 +61,7 @@ BEGIN
 		
 		UPDATE apuestas SET puntuacion = @c_puntuacion 
 		where id_partido = OLD.id and id = c_id_apuesta;
-		UPDATE personas SET puntucaion = puntuacion + @c_puntuacion 
+		UPDATE personas SET puntuacion = puntuacion + @c_puntuacion 
 		where id = c_id_persona;
 	END LOOP cursor_loop;
 	CLOSE cursor_apuestas;
