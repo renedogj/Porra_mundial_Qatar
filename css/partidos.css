@@ -9,7 +9,7 @@ h3{
 }
 
 .select{
-	margin: auto;
+	margin: 1% auto;
 	min-width: 140px;
 	width: 20%;
 	height: 30px;
@@ -31,9 +31,8 @@ h3{
 
 .divContenedorTabla .divPartidos{
 	display: grid;
-	grid-template-columns: 2fr 3fr 1fr 3fr 1fr 1fr 1fr 1fr 3fr 1fr;
+	grid-template-columns: 2fr 3fr 1fr 3fr 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
 }
-
 
 .divContenedorTabla .divPartidos div {
 	border: solid 1px;
@@ -42,7 +41,7 @@ h3{
 	padding: 2% 1%;
 }
 
-.divBandera, .divBoton, .divFecha, .divApuesta, .divResultado, .divNombre{
+.divBandera, .divBoton, .divFecha, .divApuesta, .divResultado, .divNombre, .divPuntuacion{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -73,6 +72,11 @@ h3{
 	width: 25px;
 }
 
+#divTablaPartidosPorFecha div.divTh{
+	font-size: 0.9em !important;
+	padding: 2%;
+}
+
 @media(max-width: 900px){
 	.select{
 		width: 25%;
@@ -85,26 +89,10 @@ h3{
 		margin: 0.5%;
 	}
 	.divContenedorTabla h1{
-		font-size:1.8em;	
-	}
-}
-
-@media(max-width: 700px){
-	.select{
-		width: 30%;
-	}
-	.select select{
-		font-size: 16px;
-	}
-	.divContenedorTabla{
-		width: 92%;
+		font-size: 1.8em;	
 	}
 	.divContenedorTabla .divPartidos{
-		display: grid;
-		grid-template-columns: 2fr 3fr 1fr 2fr 1fr 1fr 1fr 1fr 2+fr 1fr;
-	}
-	.divPartidos div{
-		font-size: 0.9em;
+		grid-template-columns: 2fr 3fr 1fr 2fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
 	}
 	.divNombre{
 		display: none;
@@ -114,14 +102,35 @@ h3{
 		justify-content: center;
 		align-items: center;
 	}
+}
+
+@media(max-width: 700px){
+	.select{
+		width: 30%;
+		margin: 2% auto;
+	}
+	.select select{
+		font-size: 16px;
+	}
+	.divContenedorTabla{
+		width: 96%;
+	}
+	.divPartidos div{
+		font-size: 0.9em;
+	}
 	.divPartidosGrupo h2{
 		font-size: 1.4em;
+	}
+	#divTablaPartidosPorFecha div.divTh{
+		font-size: 0.7em !important;
+		padding: 4%;
 	}
 }
 
 @media(max-width: 600px){
 	.select{
 		width: 35%;
+		margin: 3% auto;
 	}
 	.select select{
 		font-size: 15px;
@@ -132,26 +141,30 @@ h3{
 	.divPartidosGrupo h2{
 		font-size: 1.3em;
 	}
+	.divContenedorTabla .divPartidos{
+		grid-template-columns: 2fr 1fr 2fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
+	}
+	.divFecha{
+		display: none;
+	}
 }
 
 @media(max-width: 500px){
 	.select{
 		width: 50%;
+		margin: 4% auto;
 	}
 	.select select{
 		font-size: 14px;
-	}
-	.divContenedorTabla .divPartidos{
-		display: grid;
-		grid-template-columns: 2fr 1fr 2fr 1fr 1fr 1fr 1fr 2fr 1fr;
-	}
-	.divFecha{
-		display: none;
 	}
 	.divContenedorTabla h1{
 		font-size:1.5em;	
 	}
 	.divPartidosGrupo h2{
 		font-size: 1.2em;
+	}
+	#divTablaPartidosPorFecha div.divTh{
+		font-size: 0.6em !important;
+		padding: 5%;
 	}
 }

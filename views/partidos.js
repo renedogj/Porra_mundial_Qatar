@@ -13,10 +13,25 @@ function mostrarPartidosPorGrupos(partidos){
 					)
 				);
 			}
+			$("#tablePartidosGrupo-"+grupo).addClass("divPartidos").append(
+				$("<div>").addClass("divTh").addClass("divBoton").text(""),
+				$("<div>").addClass("divTh").addClass("divFecha").text("Fecha"),
+				$("<div>").addClass("divTh").addClass("divApuesta").text("Tu porra"),
+				$("<div>").addClass("divTh").addClass("divNombre").text("Pais"),
+				$("<div>").addClass("divTh").addClass("divAbreviatura").text("Pais"),
+				$("<div>").addClass("divTh").addClass("divBandera").text(""),
+				$("<div>").addClass("divTh").addClass("divResultado").text("Result"),
+				$("<div>").addClass("divTh").addClass("divResultado").text("Result"),
+				$("<div>").addClass("divTh").addClass("divBandera").text(""),
+				$("<div>").addClass("divTh").addClass("divAbreviatura").text("Pais"),
+				$("<div>").addClass("divTh").addClass("divNombre").text("Pais"),
+				$("<div>").addClass("divTh").addClass("divApuesta").text("Tu porra"),
+				$("<div>").addClass("divTh").addClass("divPuntuacion").text("Puntos"),
+			);
 			for (partido of partidosGrupos[grupo]){
 				partido = validarNulos(partido);
 				let idPartido = partido.id;
-				$("#tablePartidosGrupo-"+grupo).addClass("divPartidos").append(
+				$("#tablePartidosGrupo-"+grupo).append(
 					$("<div>").addClass("divBoton").append(
 						$("<button>").addClass("button").attr("id","botonVotar-"+idPartido).text("Vota").click(() => {
 							window.location.assign("apuesta.php?idPartido="+idPartido);
@@ -37,6 +52,7 @@ function mostrarPartidosPorGrupos(partidos){
 					$("<div>").addClass("divAbreviatura").text(partido.abreviatura_2),
 					$("<div>").addClass("divNombre").text(partido.nombre_2),
 					$("<div>").addClass("divApuesta").text(partido.apuesta_2),
+					$("<div>").addClass("divPuntuacion").text(partido.puntuacion),
 				)
 			}
 		}
@@ -44,10 +60,25 @@ function mostrarPartidosPorGrupos(partidos){
 }
 
 function mostrarPartidosPorFecha(partidos){
+	$("#divTablaPartidosPorFecha").addClass("divPartidos").append(
+		$("<div>").addClass("divTh").addClass("divBoton").text(""),
+		$("<div>").addClass("divTh").addClass("divFecha").text("Fecha"),
+		$("<div>").addClass("divTh").addClass("divApuesta").text("Tu porra"),
+		$("<div>").addClass("divTh").addClass("divNombre").text("Pais"),
+		$("<div>").addClass("divTh").addClass("divAbreviatura").text("Pais"),
+		$("<div>").addClass("divTh").addClass("divBandera").text(""),
+		$("<div>").addClass("divTh").addClass("divResultado").text("Result"),
+		$("<div>").addClass("divTh").addClass("divResultado").text("Result"),
+		$("<div>").addClass("divTh").addClass("divBandera").text(""),
+		$("<div>").addClass("divTh").addClass("divAbreviatura").text("Pais"),
+		$("<div>").addClass("divTh").addClass("divNombre").text("Pais"),
+		$("<div>").addClass("divTh").addClass("divApuesta").text("Tu porra"),
+		$("<div>").addClass("divTh").addClass("divPuntuacion").text("Puntos"),
+	);
 	for (partido of partidos){
 		partido = validarNulos(partido);
 		let idPartido = partido.id;
-		$("#divTablaPartidosPorFecha").addClass("divPartidos").append(
+		$("#divTablaPartidosPorFecha").append(
 			$("<div>").addClass("divBoton").append(
 				$("<button>").addClass("button").text("Vota").click(() => {
 					window.location.assign("apuesta.php?idPartido="+idPartido);
@@ -68,6 +99,7 @@ function mostrarPartidosPorFecha(partidos){
 			$("<div>").addClass("divAbreviatura").text(partido.abreviatura_2),
 			$("<div>").addClass("divNombre").text(partido.nombre_2),
 			$("<div>").addClass("divApuesta").text(partido.apuesta_2),
+			$("<div>").addClass("divPuntuacion").text(partido.puntuacion),
 		)
 	}
 }
@@ -84,6 +116,9 @@ function validarNulos(partido){
 	}
 	if(partido.apuesta_2 == undefined || partido.apuesta_2 == null || partido.apuesta_2 == ""){
 		partido.apuesta_2 = "-";
+	}
+	if(partido.puntuacion == undefined || partido.puntuacion == null || partido.puntuacion == ""){
+		partido.puntuacion = "-";
 	}
 	return partido;
 }

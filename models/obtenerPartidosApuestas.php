@@ -17,6 +17,7 @@ $sql = "SELECT
 	resultado_2,
 	apuesta_1,
 	apuesta_2,
+	puntuacion,
 	faseGrupos
 	FROM partidos
 	LEFT JOIN paises as paises_1
