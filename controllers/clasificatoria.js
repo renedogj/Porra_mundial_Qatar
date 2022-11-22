@@ -14,7 +14,7 @@ $.ajax({
 		}
 	},
 	error(xhr,status,error){
-		console.log(error)
+		console.error(error)
 	},
 	dataType: "json",
 	async: false
@@ -24,7 +24,6 @@ $.ajax({
 	method: "POST",
 	url: "../models/clasificatoria.php",
 	success: function(result){
-		console.log(result);
 		if(result.length != 0){
 			$("#puesto_1").val(result[0].puesto_1);
 			$("#puesto_2").val(result[0].puesto_2);
@@ -33,13 +32,28 @@ $.ajax({
 		}
 	},
 	error(xhr,status,error){
-		console.log(error)
+		console.error(error)
 	},
 	dataType: "json"
 });
 
 if(fechaInicioMundial < new Date().getTime()){
 	$("#guardarPorraClasificacion").hide();
+
+	$.ajax({
+		method: "POST",
+		url: "../models/obtenerApuestasClasificatoria.php",
+		success: function(result){
+			apuestasClasificatoria = result["clasificatoria"];
+			id = result["id"];
+			console.log(apuestasClasificatoria);
+			mostrarPorraClasificatoria(apuestasClasificatoria);
+		},
+		error(xhr,status,error){
+			console.error(error)
+		},
+		dataType: "json"
+	});
 }
 
 $("#guardarPorraClasificacion").click(() => {
@@ -64,7 +78,7 @@ $("#guardarPorraClasificacion").click(() => {
 					}
 				},
 				error(xhr,status,error){
-					console.log(error)
+					console.error(error)
 				},
 				dataType: "json"
 			});
@@ -99,11 +113,12 @@ var intervalCountDownFechaPartido = setInterval(() => {
 	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-	$("#countdown-timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
-
+	
 	if (distance < 0) {
 		clearInterval(intervalCountDownFechaPartido);
-		$("#countdown-timer").text("Ya no puedes editar tu porra, el partido ha comenzado");
+		$("#countdown-timer").text("");
+		$(".contdown").text("Ya no puedes editar tu porra, el mundial ya ha comenzado");
+	}else{
+		$("#countdown-timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
 	}
 }, 1000);

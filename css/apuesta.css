@@ -19,8 +19,8 @@
 	grid-template-columns: 5fr 60px 1fr 60px 5fr;
 	grid-template-rows: auto;
 	grid-template-areas:
-		"nomAbrev_1 bandera_1 div_vs bandera_2 nomAbrev_2"
-		"divInputApuesta_1 divInputApuesta_1 div_vs divInputApuesta_2 divInputApuesta_2";
+	"nomAbrev_1 bandera_1 div_vs bandera_2 nomAbrev_2"
+	"divInputApuesta_1 divInputApuesta_1 div_vs divInputApuesta_2 divInputApuesta_2";
 	row-gap: 10px;
 }
 
@@ -88,12 +88,37 @@
 
 .contdown{
 	margin: 2% 0;
+	text-align: center;
 }
 
 .button{
 	margin: 1%;
 	width: 10%;
 	padding: 0.5% 1%;
+}
+
+#divPorrasPartido{
+	width: 80%;
+	margin: 1% auto;
+	padding: 1% 0 5%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+#divPorrasPartido .divTh,
+#divPorrasPartido .divTd {
+	border: solid 1px;
+	border-color: #202020;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2%;
+	font-size: 1em;
+}
+
+#divPorrasPartido .divTh{
+	font-weight: bold;
 }
 
 @media(max-width: 1150px){
@@ -117,10 +142,32 @@
 	}
 }
 
+@media(max-width: 600px){
+	#divClasificatoriaApuestas{
+		width: 90%;
+		margin: 3% auto;
+	}
+	#divClasificatoriaApuestas .divTh,
+	#divClasificatoriaApuestas .divTd {
+		font-size: 0.9em;
+	}
+}
+
 @media(max-width: 550px){
 	.button{
 		margin: 2%;
 		width: 20%;
 		padding: 1.5% 1%;
+	}
+}
+
+@media(max-width: 500px){
+	#divClasificatoriaApuestas{
+		width: 95%;
+		margin: 8% auto;
+	}
+	#divClasificatoriaApuestas .divTh,
+	#divClasificatoriaApuestas .divTd {
+		font-size: 0.8em;
 	}
 }

@@ -7,7 +7,6 @@ $.ajax({
 		idPartido: idPartido
 	},
 	success: function(result){
-		console.log(result);
 		partido = result;
 		$("#div_pais_1").text(partido.nombre_1);
 		$("#div_pais_2").text(partido.nombre_2);
@@ -39,7 +38,6 @@ $("#bttnApostar").click(() => {
 				url: "../models/apostar.php",
 				data: datos,
 				success: function(result){
-					console.log(result);
 					if(!result.error){
 						window.location.assign("partidos.php");
 					}else{
@@ -47,7 +45,7 @@ $("#bttnApostar").click(() => {
 					}
 				},
 				error(xhr,status,error){
-					console.log(error)
+					console.error(error)
 				},
 				dataType: "json"
 			});
@@ -61,6 +59,24 @@ $("#bttnApostar").click(() => {
 
 if(fechaPartido < new Date().getTime()){
 	$("#bttnApostar").hide();
+
+	$.ajax({
+		method: "POST",
+		url: "../models/obtenerApuestasPartido.php",
+		data: {
+			idPartido : idPartido,
+		},
+		success: function(result){
+			console.log(result);
+			porrasPartido = result["porrasPartido"];
+			id = result["id"];
+			mostrarPorrasPartido(porrasPartido);
+		},
+		error(xhr,status,error){
+			console.error(error)
+		},
+		dataType: "json"
+	});
 }
 
 var intervalCountDownFechaPartido = setInterval(() => {

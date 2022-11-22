@@ -25,6 +25,7 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 	<link rel="stylesheet" type="text/css" href="../css/body.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
 	<link rel="stylesheet" type="text/css" href="../css/apuesta.css">
+	<link rel="stylesheet" type="text/css" href="../css/tablas.css">
 </head>
 <body>
 	<script type="text/javascript">
@@ -41,5 +42,7 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 		include "../views/irGuardarResultado.html";
 	}
 	?>
+	<div id="divPorrasPartido"></div>
+	<script type="text/javascript" src="../views/apuesta.js"></script>
 </body>
 </html>

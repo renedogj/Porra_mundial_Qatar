@@ -46,7 +46,55 @@
 	padding: 1%;
 }
 
+.contdown{
+	margin: 2% 0;
+	text-align: center;
+}
+
+#divClasificatoriaApuestas{
+	width: 80%;
+	margin: 1% auto;
+	padding: 1% 0 5%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+#divClasificatoriaApuestas .divTh,
+#divClasificatoriaApuestas .divTd {
+	border: solid 1px;
+	border-color: #202020;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2%;
+	font-size: 1em;
+}
+
+#divClasificatoriaApuestas .divTh{
+	font-weight: bold;
+}
+
+@media(max-width: 600px){
+	#divClasificatoriaApuestas{
+		width: 90%;
+		margin: 3% auto;
+	}
+	#divClasificatoriaApuestas .divTh,
+	#divClasificatoriaApuestas .divTd {
+		font-size: 0.9em;
+	}
+}
+
 @media(max-width: 500px){
+	#divClasificatoriaApuestas{
+		width: 95%;
+		margin: 8% auto;
+	}
+	#divClasificatoriaApuestas .divTh,
+	#divClasificatoriaApuestas .divTd {
+		font-size: 0.8em;
+	}
 	.button{
 		margin: 4% 35%;
 	}
