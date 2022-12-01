@@ -6,7 +6,6 @@ $.ajax({
 		idPartido: idPartido
 	},
 	success: function(result){
-		console.log(result);
 		partido = result;
 		$("#div_pais_1").text(partido.nombre_1);
 		$("#div_pais_2").text(partido.nombre_2);
@@ -27,6 +26,7 @@ $.ajax({
 $("#bttnGuardarResultado").click(() => {
 	var datos = {};
 	datos["idPartido"] = idPartido;
+	datos["faseGrupos"] = partido.faseGrupos;
 	datos["resultado1"] = $("#inputResultado_1").val();
 	datos["resultado2"] = $("#inputResultado_2").val();
 	if(validarDatos(datos)){

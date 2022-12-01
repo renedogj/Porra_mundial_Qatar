@@ -1,6 +1,7 @@
 <?php
 session_start();
 $idPartido = $_POST["idPartido"];
+$faseGrupos = $_POST["faseGrupos"];
 $resultado1 = $_POST["resultado1"];
 $resultado2 = $_POST["resultado2"];
 
@@ -41,6 +42,8 @@ foreach($apuestas as $apuesta){
 	if($ganador_apuesta == $ganador_es){
 		$puntuacion++;
 	}
+
+	$puntuacion *= $faseGrupos;
 
 	$id_apuesta = $apuesta["id"];
 	$id_persona = $apuesta["id_persona"];

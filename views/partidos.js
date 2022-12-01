@@ -13,6 +13,7 @@ function mostrarPartidosPorGrupos(partidos){
 					)
 				);
 			}
+			//Insertar cabeza de la tabla
 			$("#tablePartidosGrupo-"+grupo).addClass("divPartidos").append(
 				$("<div>").addClass("divTh").addClass("divBoton").text(""),
 				$("<div>").addClass("divTh").addClass("divFecha").text("Fecha"),

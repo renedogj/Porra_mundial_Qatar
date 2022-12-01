@@ -31,7 +31,7 @@ function comprobarGrupo(partido, index, partidos){
 		}
 		return false;
 	}else{
-		return partido.faseGrupos = this;
+		return partido.faseGrupos == this;
 	}
 	return false;
 }
