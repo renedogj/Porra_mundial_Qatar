@@ -26,6 +26,24 @@ function mostrarPorrasPartido(porrasPartido) {
 	}
 }
 
+function comprobarEmpate(){
+	//Si el partido no es de fase de grupos (!= 1)
+	if(partido.faseGrupos != 1){
+		//Si se han introducido apuesta
+		if($("#inputApuesta_2").val() != "" && $("#inputApuesta_1").val() != ""){
+			//Si los valores introducidos son iguales se muestra elegir ganador por penaltis
+			if($("#inputApuesta_1").val() == $("#inputApuesta_2").val()){
+				$("#divInputGanador").css("display","flex");
+			}else{
+				//Si no son iguales se oculta todo y se deselecciona el ganador
+				$("#divInputGanador").css("display","none");
+				$("#ganador_1").prop("checked", false);
+				$("#ganador_2").prop("checked", false);
+			}
+		}
+	}
+}
+
 function validarNulos(partido){
 	if(porra.apuesta_1 == undefined || porra.apuesta_1 == null || porra.apuesta_1 == ""){
 		porra.apuesta_1 = "-";

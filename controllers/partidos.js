@@ -14,9 +14,11 @@ $.ajax({
 				partidosGrupos[1][grupo] = partidos.filter(comprobarGrupo,grupo);
 			}
 		}
-		mostrarPartidosPorFecha(partidos);
 		mostrarPartidosPorGrupos(partidosGrupos);
-		$("#divPartidosPorGrupos").css("display","none");
+		mostrarPartidosPorFecha(partidos);
+		//$("#divPartidosPorGrupos").css("display","none");
+		$("#divPartidosPorFecha").css("display","none");
+		location.assign("#divPartidosGrupo-2");
 	},
 	error(xhr,status,error){
 		console.log(error)

@@ -17,6 +17,7 @@ $sql = "SELECT
 	resultado_2,
 	apuesta_1,
 	apuesta_2,
+	partidos.ganador,
 	puntuacion,
 	faseGrupos
 	FROM partidos

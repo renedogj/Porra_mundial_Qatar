@@ -2,7 +2,6 @@
 	<h3>Tu porra</h3>
 	<div class="divFormApuesta">
 		<div id="div_pais_1" class="divNombre nomAbrev_1"></div>
-		<div id="div_abreviatura_1" class="divAbreviatura nomAbrev_1"></div>
 		<div class="divBandera">
 			<img id="bandera_1"/>
 		</div>
@@ -10,13 +9,19 @@
 		<div class="divBandera">
 			<img id="bandera_2"/>
 		</div>
-		<div id="div_abreviatura_2" class="divAbreviatura nomAbrev_2"></div>
 		<div id="div_pais_2" class="divNombre nomAbrev_2"></div>
 		<div class="divInputApuesta_1 divInputApuesta">
 			<input id="inputApuesta_1" type="number" min="0" step="1">
 		</div>
 		<div class="divInputApuesta_2 divInputApuesta">
 			<input id="inputApuesta_2" type="number" min="0" step="1">
+		</div>
+		<div class="divInputGanador" id="divInputGanador">
+			<label id="labelGanador_1" for="ganador_1"></label>
+			<input type="radio" id="ganador_1" name="ganador" value="1">
+			<label>Ganador por penaltis</label>
+			<input type="radio" id="ganador_2" name="ganador" value="2">
+			<label id="labelGanador_2" for="ganador_2"></label>
 		</div>
 	</div>
 	<p class="contdown">La porra se cierra en: <span id="countdown-timer"></span></p>

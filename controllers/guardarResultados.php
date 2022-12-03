@@ -7,8 +7,8 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 	die();
 }else{
 	if($_SESSION["id"] != 1 || $_SESSION["id"] != 2){
-		header("Location: partidos.php");
-		die();
+		//header("Location: partidos.php");
+		//die();
 	}
 	$idPartido = $_GET["idPartido"];
 }

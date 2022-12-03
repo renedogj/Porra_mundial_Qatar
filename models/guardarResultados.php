@@ -4,34 +4,36 @@ $idPartido = $_POST["idPartido"];
 $faseGrupos = $_POST["faseGrupos"];
 $resultado1 = $_POST["resultado1"];
 $resultado2 = $_POST["resultado2"];
+//Si existe $_POST["ganador"] se recoge en ganador si no se le asigna null
+if(isset($_POST["ganador"])){
+	$ganador = $_POST["ganador"];
+}else{
+	$ganador = null;
+}
 
 include_once "../db/db.php";
 
-if ($resultado1 == $resultado2){ 
-	$ganador_es = 0;
-}elseif ($resultado1 > $resultado2){
-	$ganador_es = 1;
-}else{
-	$ganador_es = 2;
+//Si ganador es null
+if($ganador == null || $faseGrupos == 1){
+	if ($resultado1 == $resultado2){ 
+		$ganador = 0;
+	}elseif ($resultado1 > $resultado2){
+		$ganador = 1;
+	}else{
+		$ganador = 2;
+	}
 }
-
-$sql = "UPDATE partidos set resultado_1 = $resultado1, resultado_2 = $resultado2 where id = $idPartido";
-
+//Uptualizamos los resultados y el ganador del partido
+$sql = "UPDATE partidos set resultado_1 = $resultado1, resultado_2 = $resultado2, ganador = $ganador where id = $idPartido";
 $conexion->exec($sql);
 
-$sql = "SELECT id,id_persona,apuesta_1,apuesta_2,puntuacion FROM apuestas WHERE id_partido = $idPartido";
+//Selcionamos la información de la tabla apuestas
+$sql = "SELECT id,id_persona,apuesta_1,apuesta_2,ganador,puntuacion FROM apuestas WHERE id_partido = $idPartido";
 
 $apuestas = obtenerArraySQL($conexion, $sql);
-
+//Iteramos las distintas apuestas
 foreach($apuestas as $apuesta){
 	$puntuacion = 0;
-	if ($apuesta["apuesta_1"] == $apuesta["apuesta_2"]){ 
-		$ganador_apuesta = 0;
-	}elseif ($apuesta["apuesta_1"] > $apuesta["apuesta_2"]){
-		$ganador_apuesta = 1;
-	}else{
-		$ganador_apuesta = 2;
-	}
 
 	if($resultado1 == $apuesta["apuesta_1"]){
 		$puntuacion++;
@@ -39,10 +41,28 @@ foreach($apuestas as $apuesta){
 	if($resultado2 == $apuesta["apuesta_2"]){
 		$puntuacion++;
 	}
-	if($ganador_apuesta == $ganador_es){
-		$puntuacion++;
+	//Si el partido es de fase de grupos comprobamos si ha acertado el ganador
+	if($faseGrupos == 1){
+		//Obtenemos el ganador por el que ha apostado
+		if ($apuesta["apuesta_1"] == $apuesta["apuesta_2"]){ 
+			$ganador_apuesta = 0;
+		}elseif ($apuesta["apuesta_1"] > $apuesta["apuesta_2"]){
+			$ganador_apuesta = 1;
+		}else{
+			$ganador_apuesta = 2;
+		}
+		//Si ha acertado el ganador sumamos 1 a la puntuación
+		if($ganador_apuesta == $ganador){
+			$puntuacion++;
+		}
+	}else{ //Si el partido no es de fase de grupos
+		//Si ha acertado el ganador sumamos 1 a la puntuación 
+		if($apuesta["ganador"] == $ganador){
+			$puntuacion++;
+		}
 	}
 
+	//Multiplicacmos la puntuación por la fase de grupo en la que estamos
 	$puntuacion *= $faseGrupos;
 
 	$id_apuesta = $apuesta["id"];

@@ -20,7 +20,8 @@
 	grid-template-rows: auto;
 	grid-template-areas:
 	"nomAbrev_1 bandera_1 div_vs bandera_2 nomAbrev_2"
-	"divInputApuesta_1 divInputApuesta_1 div_vs divInputApuesta_2 divInputApuesta_2";
+	"divInputApuesta_1 divInputApuesta_1 div_vs divInputApuesta_2 divInputApuesta_2"
+	"divInputGanador divInputGanador divInputGanador divInputGanador divInputGanador";
 	row-gap: 10px;
 }
 
@@ -34,9 +35,9 @@
 	width: 50px;
 }
 
-.divAbreviatura{
+/*.divAbreviatura{
 	display: none;
-}
+}*/
 
 .divBandera, .divInputApuesta, .divResultado, .divNombre{
 	display: flex;
@@ -65,6 +66,7 @@
 
 .div_vs{
 	grid-area: div_vs;
+	align-self: center;
 }
 
 .bandera_2{
@@ -119,6 +121,18 @@
 
 #divPorrasPartido .divTh{
 	font-weight: bold;
+}
+
+.divInputGanador{
+	grid-area: divInputGanador;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.divInputGanador{
+	display: none;
 }
 
 @media(max-width: 1150px){
