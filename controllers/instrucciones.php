@@ -39,10 +39,32 @@
 				</ul>
 			</li>
 			<li>
-				<b>Pestaña "Vota por partidos":</b> vota el resultado de cada partido de la fase de grupos. Recibirás un punto si adivinas quien gana el partido, otro punto si adivinas el resultado exacto del equipo A y otro por el resultado del equipo B. Podrás votar hasta el inicio del partido en cuestión
+				<b>Pestaña "Vota por partidos":</b> vota el resultado de cada partido. Recibirás un punto si adivinas quien gana el partido, otro punto si adivinas el resultado exacto del equipo A y otro por el resultado del equipo B. Podrás votar hasta el inicio del partido en cuestión.
+				<br><br>
+				<b>Resumen puntuación fase de grupos:</b><br>
+				+1 por cada resultado (+2 en total)<br>
+				+1 por ganador<br>
 			</li>
 			<li>
-				Sigue la clasificación! Próximamente publicaremos las instrucciones de las siguientes fases ⚽⚽⚽
+				Durante el resto de fases no hay posibilidad de empate por lo tanto: si votamos que en un partido quedan empatados, tendremos que elegir que equipo gana en los penaltis
+				<br><br>
+				<b>De está forma seguiremos con la estructura de 3 puntos:</b><br>
+				+1 por cada resultado (+2 en total)<br>
+				+1 por ganador (Aunque gane en penaltis)<br>
+			</li>
+			<li>
+				Para hacer más emocionante la porra hemos decidido que en las proximas fases será posible conseguir más puntos por partido.
+
+				De los 3 puntos que podiamos obtener hasta ahora, se multiplicaran con el objetivo de que haya gente que se quede sin posibilidad de un buen puesto.
+				<ul>
+					En función de la fase los puntos se multiplicarán así:
+					<li>Fase de grupos: x1</li>
+					<li>Octavos: x2</li>
+					<li>Cuartos: x3</li>
+					<li>Semifinal: x4</li>
+					<li>Tercer y cuarto puesto: x5</li>
+					<li>Final: x6</li>
+				</ul>
 			</li>
 		</ol>
 	</div>
