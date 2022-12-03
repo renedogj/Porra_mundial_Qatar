@@ -41,29 +41,36 @@ foreach($apuestas as $apuesta){
 	if($resultado2 == $apuesta["apuesta_2"]){
 		$puntuacion++;
 	}
+	
+	//Obtenemos el ganador por el que ha apostado
+	if ($apuesta["apuesta_1"] == $apuesta["apuesta_2"]){ 
+		$ganador_apuesta = 0;
+	}elseif ($apuesta["apuesta_1"] > $apuesta["apuesta_2"]){
+		$ganador_apuesta = 1;
+	}else{
+		$ganador_apuesta = 2;
+	}
+
 	//Si el partido es de fase de grupos comprobamos si ha acertado el ganador
 	if($faseGrupos == 1){
-		//Obtenemos el ganador por el que ha apostado
-		if ($apuesta["apuesta_1"] == $apuesta["apuesta_2"]){ 
-			$ganador_apuesta = 0;
-		}elseif ($apuesta["apuesta_1"] > $apuesta["apuesta_2"]){
-			$ganador_apuesta = 1;
-		}else{
-			$ganador_apuesta = 2;
-		}
 		//Si ha acertado el ganador sumamos 1 a la puntuación
 		if($ganador_apuesta == $ganador){
 			$puntuacion++;
 		}
 	}else{ //Si el partido no es de fase de grupos
-		//Si ha acertado el ganador sumamos 1 a la puntuación 
-		if($apuesta["ganador"] == $ganador){
+		//Si se ha apostado por empate comprobamos si el ganador apostado en penaltis coincide
+		//En caso contrario comprobamos si el coinciden los ganadores
+		if($ganador_apuesta == 0){
+			if($apuesta["ganador"] == $ganador){
+				$puntuacion++;
+			}
+		}elseif($ganador_apuesta == $ganador){
 			$puntuacion++;
 		}
 	}
 
 	//Multiplicacmos la puntuación por la fase de grupo en la que estamos
-	$puntuacion *= $faseGrupos;
+	$puntuacion = $puntuacion * $faseGrupos;
 
 	$id_apuesta = $apuesta["id"];
 	$id_persona = $apuesta["id_persona"];
@@ -72,6 +79,4 @@ foreach($apuestas as $apuesta){
 	$sql = "UPDATE personas SET puntuacion = puntuacion + $puntuacion where id = $id_persona";
 	$conexion->exec($sql);
 }
-
-echo json_encode($apuestas);
 ?>
