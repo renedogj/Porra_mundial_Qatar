@@ -26,7 +26,8 @@ $sql = "SELECT
 	LEFT JOIN paises as paises_2
 	ON partidos.id_pais_2 = paises_2.id
 	LEFT JOIN apuestas
-	ON partidos.id = apuestas.id_partido and apuestas.id_persona=$id";
+	ON partidos.id = apuestas.id_partido and apuestas.id_persona=$id
+	ORDER BY fecha";
 
 $partidos = obtenerArraySQL($conexion, $sql);
 

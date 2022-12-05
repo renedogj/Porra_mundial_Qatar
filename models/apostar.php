@@ -13,13 +13,13 @@ if(isset($_POST["ganador"])){
 	if($idApuesta == null){
 		$sql = "INSERT INTO apuestas (id_partido, id_persona, apuesta_1, apuesta_2, ganador) VALUES ('$idPartido','$id','$apuesta1','$apuesta2','$ganador')";	
 	}else{
-		$sql = "UPDATE apuestas set apuesta_1 = $apuesta1, apuesta_2 = $apuesta2, ganador = '$ganador' where id = $idApuesta";
+		$sql = "UPDATE apuestas set apuesta_1 = $apuesta1, apuesta_2 = $apuesta2, ganador = $ganador where id = $idApuesta";
 	}
 }else{
 	if($idApuesta == null){
 		$sql = "INSERT INTO apuestas (id_partido, id_persona, apuesta_1, apuesta_2) VALUES ('$idPartido','$id','$apuesta1','$apuesta2')";	
 	}else{
-		$sql = "UPDATE apuestas set apuesta_1 = $apuesta1, apuesta_2 = $apuesta2 where id = $idApuesta";
+		$sql = "UPDATE apuestas set apuesta_1 = $apuesta1, apuesta_2 = $apuesta2, ganador = null where id = $idApuesta";
 	}
 }
 
