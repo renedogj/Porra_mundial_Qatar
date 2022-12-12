@@ -17,7 +17,7 @@ $("#formInicioSesion").submit(() => {
 					$("#label-inicioIncorrecto").show();
 				}
 			},error(xhr,status,error){
-				console.log(error)
+				console.error(error)
 			},
 			dataType: "json"
 		});
