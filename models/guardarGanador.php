@@ -1,8 +1,9 @@
 <?php
-$idPuesto_1 = $_POST["idPuesto_1"];
-$idPuesto_2 = $_POST["idPuesto_2"];
-$idPuesto_3 = $_POST["idPuesto_3"];
-$idPuesto_4 = $_POST["idPuesto_4"];
+$idPuestos = [];
+
+$idPuestos = [25, 5, 9, 17];
+
+//var_dump($idPuestos);
 
 include_once "../db/db.php";
 
@@ -10,5 +11,23 @@ $sql = "SELECT id_persona, puesto_1, puesto_2, puesto_3, puesto_4 from apuestas_
 
 $apuestas = obtenerArraySQL($conexion, $sql);
 
+foreach($apuestas as $apuesta){
+	$puntuacion = 0;
+	$arrPuestos = [$apuesta["puesto_1"], $apuesta["puesto_2"], $apuesta["puesto_3"], $apuesta["puesto_4"]];
+	for($i=0; $i<4; $i++){
+		if (in_array($idPuestos[$i], $arrPuestos)){
+			$puntuacion++;
+		}
+		if($idPuestos[$i] == $arrPuestos[$i]){
+			$puntuacion += 20-5*$i;
+		}
+	}
+	$puntuacion = 0;
 
+	$id_persona = $apuesta["id_persona"];
+	$sql = "UPDATE apuestas_clasificacion SET puntuacion = $puntuacion where id_persona = $id_persona";
+	$conexion->exec($sql);
+	$sql = "UPDATE personas SET puntuacion = puntuacion + $puntuacion where id = $id_persona";
+	$conexion->exec($sql);
+}
 ?>
