@@ -3,14 +3,12 @@ include_once "../db/db.php";
 
 $sql = "SELECT id from personas";
 $personas = obtenerArraySQL($conexion, $sql);
-//var_dump($personas);
 
 $sql = "SELECT id_persona, puntuacion from apuestas";
 $apuestas = obtenerArraySQL($conexion, $sql);
 
 $sql = "SELECT id_persona, puntuacion from apuestas_clasificacion";
 $apuestaGanador = obtenerArraySQL($conexion, $sql);
-//var_dump($apuestaGanador);
 
 foreach($personas as $persona){
 	$id_persona = $persona["id"];

@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS `apuestas_clasificacion` (
   `puesto_2` int(4) DEFAULT NULL,
   `puesto_3` int(4) DEFAULT NULL,
   `puesto_4` int(4) DEFAULT NULL,
+  `puntuacion` int(2) DEFAULT NULL,
   PRIMARY KEY (`id_persona`),
   KEY `puesto_1_apuestas_clasificacion_fk` (`puesto_1`),
   KEY `puesto_2_apuestas_clasificacion_fk` (`puesto_2`),

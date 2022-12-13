@@ -1,9 +1,6 @@
 <?php
+//Introducir el id de los ganadores en orden
 $idPuestos = [];
-
-$idPuestos = [25, 5, 9, 17];
-
-//var_dump($idPuestos);
 
 include_once "../db/db.php";
 
