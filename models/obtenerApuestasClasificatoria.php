@@ -11,7 +11,8 @@ $sql = "SELECT
 	paises_1.nombre as puesto_1,
 	paises_2.nombre as puesto_2,
 	paises_3.nombre as puesto_3,
-	paises_4.nombre as puesto_4
+	paises_4.nombre as puesto_4,
+	apuestas_clasificacion.puntuacion
 	FROM apuestas_clasificacion
 	LEFT JOIN paises as paises_1
 	ON apuestas_clasificacion.puesto_1 = paises_1.id

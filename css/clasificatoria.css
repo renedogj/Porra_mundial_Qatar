@@ -52,11 +52,11 @@
 }
 
 #divClasificatoriaApuestas{
-	width: 80%;
+	width: 85%;
 	margin: 1% auto;
 	padding: 1% 0 5%;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 }
 
 #divClasificatoriaApuestas .divTh,
