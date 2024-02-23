@@ -1,24 +1,9 @@
-<?php
-session_start();
-if(isset($_SESSION["id"])){
-	$id = $_SESSION["id"];
-	include_once "db/db.php";
-
-	$sql = "SELECT nombre,puntuacion,email from personas where id=$id";
-
-	$persona = obtenerArraySQL($conexion, $sql)[0];
-
-	$_SESSION["nombre"] = $persona["nombre"];
-	$_SESSION["puntuacion"] = $persona["puntuacion"];
-	$_SESSION["email"] = $persona["email"];
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mundial de Qatar</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TFM - CTF</title>
 	<meta name=author content="Javier Renedo">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -27,32 +12,22 @@ if(isset($_SESSION["id"])){
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/body.css"/>
-	<link rel="stylesheet" type="text/css" href="css/indexInicio.css">
-	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-	<div class="div-inicio">
-		<div class="div-barraSuperior">
-			<nav class="nav-menu" id="menu"></nav>
-		</div>
-		<div class="div-inicio-titulo">
-			<h1 class="h1-inicio-titulo">Mundial de Qatar 2022</h1>
-			<br>
-			<p>Proyecto desarrollado por Javier Renedo González y Carlos Renedo González</p>
-		</div>
-		<div class="div-inicioSesion">	
-			<?php
-			if(!isset($_SESSION["id"])){
-				include "views/fromInicioSesion.html";
-			}else{
-				include "views/sesionIniciada.php";
-			}
-			?>
-		</div>
+	<div class="login-box">
+		<h2>Login</h2>
+		<form action="#">
+			<div class="textbox">
+				<i class="fas fa-user"></i>
+				<input type="email" placeholder="Email" />
+			</div>
+			<div class="textbox">
+				<i class="fas fa-lock"></i>
+				<input type="password" placeholder="Password" />
+			</div>
+			<input class="btn" type="submit" value="Login" />
+		</form>
 	</div>
-	<script type="text/javascript" src="views/menu.js"></script>
-	<script type="text/javascript" src="controllers/inicio.js"></script>
-	<script type="text/javascript" src="controllers/validarFormularios.js"></script>
 </body>
 </html>
