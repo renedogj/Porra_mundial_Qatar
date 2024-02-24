@@ -24,3 +24,7 @@ updateUsername('Usuario registrado');
 
 // Agregar un evento al botón de soluciones
 solutionsBtn.addEventListener('click', showSolutions);
+
+function abrirDificultad(id) {
+	window.location.assign("../dificultades/dif"+id);
+}

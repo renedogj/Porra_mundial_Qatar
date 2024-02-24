@@ -34,23 +34,23 @@ $username = "username";
 	<div class="container">
 		<div class="options">
 			<div class="option">
-				<h3>Opción 1</h3>
+				<h3>Dificultad 1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button>Seleccionar</button>
+				<button onclick="abrirDificultad(1)">Seleccionar</button>
 			</div>
 			<div class="option">
-				<h3>Opción 2</h3>
+				<h3>Dificultad 2</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button>Seleccionar</button>
+				<button onclick="abrirDificultad(2)">Seleccionar</button>
 			</div>
 			<div class="option">
-				<h3>Opción 3</h3>
+				<h3>Dificultad 3</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button>Seleccionar</button>
+				<button onclick="abrirDificultad(3)">Seleccionar</button>
 			</div>
 		</div>
 	</div>
 
-	<!-- <script src="selecionarDificultad.js"></script> -->
+	<script src="selecionarDificultad.js"></script>
 </body>
 </html>
