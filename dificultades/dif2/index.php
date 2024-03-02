@@ -1,16 +1,15 @@
 <?php
-session_start();
-if(isset($_SESSION["id"])){
-	$id = $_SESSION["id"];
+if(isset($_COOKIE["id"])){
+	$id = $_COOKIE["id"];
 	include_once "db/db.php";
 
 	$sql = "SELECT nombre,puntuacion,email from personas where id=$id";
 
 	$persona = obtenerArraySQL($conexion, $sql)[0];
 
-	$_SESSION["nombre"] = $persona["nombre"];
-	$_SESSION["puntuacion"] = $persona["puntuacion"];
-	$_SESSION["email"] = $persona["email"];
+	$_COOKIE["nombre"] = $persona["nombre"];
+	$_COOKIE["puntuacion"] = $persona["puntuacion"];
+	$_COOKIE["email"] = $persona["email"];
 }
 ?>
 <!DOCTYPE html>
@@ -43,7 +42,7 @@ if(isset($_SESSION["id"])){
 		</div>
 		<div class="div-inicioSesion">	
 			<?php
-			if(!isset($_SESSION["id"])){
+			if(!isset($_COOKIE["id"])){
 				include "views/fromInicioSesion.html";
 			}else{
 				include "views/sesionIniciada.php";

@@ -1,8 +1,10 @@
 <?php
-session_start();
-if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
-	session_unset();
-	session_destroy();
+if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
+	setcookie("id", "", time() - 3600);
+	setcookie("nombre", "", time() - 3600);
+	setcookie("puntuacion", "", time() - 3600);
+	setcookie("email", "", time() - 3600);
+
 	header("Location: ../");
 	die();
 }else{

@@ -9,7 +9,6 @@ $("#formInicioSesion").submit(() => {
 			url: "models/iniciarSesion.php",
 			data: datosInicioSesion,
 			success: function(result){
-				console.log(result)
 				if(!result.error){
 					location.reload();
 				}else{
