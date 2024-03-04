@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION["id"])){
+	header("Location: controllers/selecionarDificultad.php");
+	die();
+}else{
+	session_unset();
+	session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

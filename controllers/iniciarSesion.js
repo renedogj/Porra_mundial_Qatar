@@ -12,6 +12,7 @@ $("#formInicioSesion").submit(() => {
 				console.log(result)
 				if(!result.error){
 					// location.reload();
+					window.location.assign("./controllers/selecionarDificultad.php");
 				}else{
 					$("#label-inicioIncorrecto").text("Email o Contraseña incorrectos");
 					$("#label-inicioIncorrecto").show();
