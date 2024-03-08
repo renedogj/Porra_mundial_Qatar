@@ -30,7 +30,7 @@ if(isset($_SESSION["id"])){
 
 	<link rel="stylesheet" type="text/css" href="../css/body.css">
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
-	<link rel="stylesheet" type="text/css" href="../css/selecionarDificultad.css">
+	<link rel="stylesheet" type="text/css" href="../css/soluciones.css">
 </head>
 <body>
 	<nav>
@@ -42,35 +42,14 @@ if(isset($_SESSION["id"])){
 			<li class="nav-item">
 				<a href="#" class="nav-link">Usuario: <?php echo $_SESSION["nombre"]; ?></a>
 			</li>
-
-			<li class="nav-item">
-				<a href="../controllers/soluciones.php" class="nav-link">Soluciones</a>
-			</li>
 		</ul>
 	</nav>
 	<div class="title-container">
 		<h1 class="title">Title</h1>
 	</div>
-	<div class="container">
-		<div class="options">
-			<div class="option">
-				<h3>Dificultad 1</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button onclick="abrirDificultad(1)">Seleccionar</button>
-			</div>
-			<div class="option">
-				<h3>Dificultad 2</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button onclick="abrirDificultad(2)">Seleccionar</button>
-			</div>
-			<div class="option">
-				<h3>Dificultad 3</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button onclick="abrirDificultad(3)">Seleccionar</button>
-			</div>
-		</div>
+	<div class="container" id="contenedorDificultades">
 	</div>
 
-	<script src="selecionarDificultad.js"></script>
+	<script src="soluciones.js"></script>
 </body>
 </html>

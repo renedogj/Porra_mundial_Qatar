@@ -38,7 +38,6 @@ if(isset($_SESSION["id"])){
 		</div>
 	</div>
 
-
 	<script type="text/javascript" src="controllers/iniciarSesion.js"></script>
 </body>
 </html>
