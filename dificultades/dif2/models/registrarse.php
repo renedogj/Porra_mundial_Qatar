@@ -15,11 +15,11 @@ try {
 	$id = $conexion->lastInsertId();
 
 	$json["error"] = false;
-	
-	$_SESSION["id"] = $id;
-	$_SESSION["nombre"] = $nombre;
-	$_SESSION["puntuacion"] = 0;
-	$_SESSION["email"] = $email;
+
+	setcookie("id", $id, time() + 86400, "/mundial%20qatar/dificultadesdif2/");
+	setcookie("nombre", $nombre, time() + 86400, "/mundial%20qatar/dificultades/dif2/");
+	setcookie("puntuacion", 0, time() + 86400, "/mundial%20qatar/dificultades/dif2/");
+	setcookie("email", $email, time() + 86400, "/mundial%20qatar/dificultades/dif2/");
 
 } catch(PDOException $e) {
 	$json["error"] = true;

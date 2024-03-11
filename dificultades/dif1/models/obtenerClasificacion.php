@@ -11,6 +11,6 @@ $sql = "SELECT
 	ORDER BY puntuacion DESC,id ASC";
 
 $json["clasificacion"] = obtenerArraySQL($conexion, $sql);
-$json["id"] = $_SESSION["id"];
+$json["id"] = $_COOKIE["id"];
 echo json_encode($json);
 ?>

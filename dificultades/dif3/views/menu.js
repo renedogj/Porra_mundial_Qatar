@@ -1,8 +1,8 @@
 var archivo = window.location.pathname.split("/");
-if(archivo[3] == undefined || archivo[3] == ""){
+if(archivo[5] == undefined || archivo[5] == ""){
 	var index = "";
 	var controllers = "controllers/";
-}else if(archivo[2] == "controllers"){
+}else if(archivo[4] == "controllers"){
 	var index = "../";
 	var controllers = "";
 }

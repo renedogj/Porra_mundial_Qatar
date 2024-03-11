@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id = $_SESSION["id"];
+$id = $_COOKIE["id"];
 $idPartido = $_POST["idPartido"];
 $idApuesta = $_POST["idApuesta"];
 $apuesta1 = $_POST["apuesta1"];

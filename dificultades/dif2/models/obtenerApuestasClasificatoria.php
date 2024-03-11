@@ -26,7 +26,7 @@ $sql = "SELECT
 	ON apuestas_clasificacion.id_persona = personas.id";
 
 $json["clasificatoria"] = obtenerArraySQL($conexion, $sql);
-$json["id"] = $_SESSION["id"];
+$json["id"] = $_COOKIE["id"];
 
 echo json_encode($json);
 ?>

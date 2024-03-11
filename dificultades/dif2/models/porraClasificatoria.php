@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id = $_SESSION["id"];
+$id = $_COOKIE["id"];
 $puesto_1 = $_POST["puesto_1"];
 $puesto_2 = $_POST["puesto_2"];
 $puesto_3 = $_POST["puesto_3"];

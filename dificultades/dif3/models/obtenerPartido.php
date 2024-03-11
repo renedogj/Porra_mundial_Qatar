@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id = $_SESSION["id"];
+$id = $_COOKIE["id"];
 $idPartido = $_POST["idPartido"];
 include_once "../db/db.php";
 

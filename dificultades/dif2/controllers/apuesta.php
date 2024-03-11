@@ -40,7 +40,7 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 	<script type="text/javascript" src="../views/menu.js"></script>
 	<script type="text/javascript" src="apuesta.js"></script>
 	<?php
-	if($_SESSION["id"] == 1 || $_SESSION["id"] == 2){
+	if($_COOKIE["id"] == 1 || $_COOKIE["id"] == 2){
 		include "../views/irGuardarResultado.html";
 	}
 	?>
