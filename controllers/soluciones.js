@@ -55,7 +55,9 @@ function getButtonFlag(idDificultad, idFlag) {
 		.addClass("collapsible")
 		.text("Flag"+idDificultad + idFlag)
 		.click(() => {
-			console.log(idDificultad + " " + idFlag)
+			window.location.assign("solucion.php?idFlag="+idFlag);
+
+			// console.log(idDificultad + " " + idFlag)
 			// $("#content"+id).toggle();
 		})
 }
