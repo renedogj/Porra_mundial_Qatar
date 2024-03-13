@@ -1,35 +1,26 @@
-// $.ajax({
-// 	method: "GET",
-// 	url: "../models/flags.json",
-// 	success: function(result){
-// 		console.log(result);
-
-// 		// setDificultades(result);
-
-// 		// if(!result.error){
-// 		// 	location.reload();
-// 		// 	window.location.assign("./controllers/selecionarDificultad.php");
-// 		// }else{
-
-// 		// }
-// 	},
-// 	error(xhr,status,error){
-// 		console.error(error)
-// 	},
-// 	dataType: "json"
-// });
-
-$.getJSON("../models/flags.json", (result) => {
-	$.each(result, function(i, flag){
-		if(i == idFlag){
-			setInfoFlag(flag);
+$.ajax({
+	method: "POST",
+	url: "../models/getInfoFlag.php",
+	data: {
+		"idFlag": idFlag,
+	},
+	success: function(result){
+		console.log(result);
+		if(!result.error){
+			setInfoFlag(result.flag);
+		}else{
+			window.location.assign("soluciones.php");
 		}
-	});
+	},error(xhr,status,error){
+		console.error(error);
+	},
+	dataType: "json"
 });
 
 function setInfoFlag(flag){
 	console.log(flag);
 	$("#pInstruciones").text(flag.instrucciones);
+	$("#title").text("Flag " + flag.id);
 }
 
 function checkAnswer() {

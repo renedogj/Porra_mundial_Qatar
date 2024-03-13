@@ -32,6 +32,9 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 	<link rel="stylesheet" type="text/css" href="../css/body.css">
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
 	<link rel="stylesheet" type="text/css" href="../css/solucion.css">
+	<script>
+		var idFlag = '<?php echo $_GET["idFlag"]; ?>';
+	</script>
 </head>
 <body>
 	<nav>
@@ -48,28 +51,18 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 	<div class="title-container">
 		<h1 class="title" id="title"></h1>
 	</div>
-	<script>
-		var idFlag = <?php echo $_GET["idFlag"]; ?>;
-		$("#title").text("Flag " + idFlag);
-	</script>
-	<!-- <div class="container" id="contenedorDificultades">
-	</div> -->
 	<main>
 		
 		<section id="clues" class="sectionInstrucciones">
 			<h2>Instruciones</h2>
-			<p id="pInstruciones"></p>
-			<!-- <button class="buttonNuevaPista">Nueva pista</button> -->
+			<p id="pInstruciones"></p>		
 		</section>
 		<section class="sectionComprobarFlag">
-			<!-- <form id="formComprobarFlag"> -->
-				<label class="labelComprobarFlag">Comprobar la respuesta:</label>
-				<div class="divInput">
-					<input type="text" id="inputFlag" name="inputFlag" placeholder="Flag">
-				</div>
-				<!-- <input id="buttonCheckFlag" class="buttonCheckFlag" type="submit" value="Comprobar flag" /> -->
-				<button id="buttonCheckFlag" class="buttonCheckFlag">Comprobar flag</button>
-			<!-- </form> -->
+			<label class="labelComprobarFlag">Comprobar la respuesta:</label>
+			<div class="divInput">
+				<input type="text" id="inputFlag" name="inputFlag" placeholder="Flag">
+			</div>
+			<button id="buttonCheckFlag" class="buttonCheckFlag">Comprobar flag</button>
 		</section>
 		<section id="clues" class="sectionPistas">
 			<h2>Pistas</h2>
