@@ -1,112 +1,98 @@
-[
-	[
-		{
-			"id" : "0",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		},
-		{
-			"id" : "1",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		},
-		{
-			"id" : "2",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		}
-	],
-	[
-		{
-			"id" : "0",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		},
-		{
-			"id" : "1",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		},
-		{
-			"id" : "0",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		}
-	],
-	[
-		{
-			"id" : "0",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		},
-		{
-			"id" : "0",
-			"flag" : "qwerty",
-			"pistas" : [
-				{
-					"id": "1",
-					"texto": "aasass"
-				},
-				{
-					"texto": "aasass"
-				}
-			]
-		}
-	]
-]
+{
+	"11": {
+		"instrucciones": "Encuentra la contraseña del usuario Javier y encriptala en SHA256",
+		"id" : "11",
+		"flag" : "1532e76dbe9d43d0dea98c331ca5ae8a65c5e8e8b99d3e2a42ae989356f6242a"
+	},
+	"12": {
+		"id" : "12",
+		"flag" : "qwerty",
+		"pistas" : [
+			{
+				"id": "1",
+				"texto": "aasass"
+			},
+			{
+				"texto": "aasass"
+			}
+		]
+	},
+	"13": {
+		"id" : "13",
+		"flag" : "qwerty",
+		"pistas" : [
+			{
+				"id": "1",
+				"texto": "aasass"
+			},
+			{	
+				"texto": "aasass"
+			}
+		]
+	},
+	"21": {
+		"id" : "21",
+		"flag" : "qwerty",
+		"pistas" : [
+			{
+				"id": "1",
+				"texto": "aasass"
+			},
+			{
+				"texto": "aasass"
+			}
+		]
+	},
+	"22": {
+		"id" : "22",
+		"flag" : "qwerty",
+		"pistas" : [
+			{
+				"id": "1",
+				"texto": "aasass"
+			},
+			{
+				"texto": "aasass"
+			}
+		]
+	},
+	"23": {
+		"id" : "23",
+		"flag" : "qwerty",
+		"pistas" : [
+			{
+				"id": "1",
+				"texto": "aasass"
+			},
+			{
+				"texto": "aasass"
+			}
+		]
+	},
+	"31": {
+		"id" : "31",
+		"flag" : "qwerty",
+		"pistas" : [
+			{
+				"id": "1",
+				"texto": "aasass"
+			},
+			{
+				"texto": "aasass"
+			}
+		]
+	},
+	"32": {
+		"id" : "32",
+		"flag" : "qwerty",
+		"pistas" : [
+			{
+				"id": "1",
+				"texto": "aasass"
+			},
+			{
+				"texto": "aasass"
+			}
+		]
+	}
+}

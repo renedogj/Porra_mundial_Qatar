@@ -46,10 +46,41 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 		</ul>
 	</nav>
 	<div class="title-container">
-		<h1 class="title">Title</h1>
+		<h1 class="title" id="title"></h1>
 	</div>
-	<div class="container" id="contenedorDificultades">
-	</div>
+	<script>
+		var idFlag = <?php echo $_GET["idFlag"]; ?>;
+		$("#title").text("Flag " + idFlag);
+	</script>
+	<!-- <div class="container" id="contenedorDificultades">
+	</div> -->
+	<main>
+		
+		<section id="clues" class="sectionInstrucciones">
+			<h2>Instruciones</h2>
+			<p id="pInstruciones"></p>
+			<!-- <button class="buttonNuevaPista">Nueva pista</button> -->
+		</section>
+		<section class="sectionComprobarFlag">
+			<!-- <form id="formComprobarFlag"> -->
+				<label class="labelComprobarFlag">Comprobar la respuesta:</label>
+				<div class="divInput">
+					<input type="text" id="inputFlag" name="inputFlag" placeholder="Flag">
+				</div>
+				<!-- <input id="buttonCheckFlag" class="buttonCheckFlag" type="submit" value="Comprobar flag" /> -->
+				<button id="buttonCheckFlag" class="buttonCheckFlag">Comprobar flag</button>
+			<!-- </form> -->
+		</section>
+		<section id="clues" class="sectionPistas">
+			<h2>Pistas</h2>
+			<ul id="listaPistas" class="listaPistas">
+				<li>Pista 1</li>
+				<li>Pista 2</li>
+				<li>Pista 3</li>
+			</ul>
+			<button class="buttonNuevaPista">Nueva pista</button>
+		</section>
+	</main>
 
 	<script src="solucion.js"></script>
 </body>

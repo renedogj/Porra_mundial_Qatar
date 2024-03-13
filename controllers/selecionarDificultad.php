@@ -51,7 +51,7 @@ if(isset($_SESSION["id"])){
 	<div class="title-container">
 		<h1 class="title">Title</h1>
 	</div>
-	<div class="container">
+	<main class="container">
 		<div class="options">
 			<div class="option">
 				<h3>Dificultad 1</h3>
@@ -69,7 +69,7 @@ if(isset($_SESSION["id"])){
 				<button onclick="abrirDificultad(3)">Seleccionar</button>
 			</div>
 		</div>
-	</div>
+	</main>
 
 	<script src="selecionarDificultad.js"></script>
 </body>

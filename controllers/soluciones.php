@@ -45,10 +45,10 @@ if(isset($_SESSION["id"])){
 		</ul>
 	</nav>
 	<div class="title-container">
-		<h1 class="title">Title</h1>
+		<h1 class="title">Comprueba las soluciones</h1>
 	</div>
-	<div class="container" id="contenedorDificultades">
-	</div>
+	<main id="contenedorDificultades">
+	</main>
 
 	<script src="soluciones.js"></script>
 </body>

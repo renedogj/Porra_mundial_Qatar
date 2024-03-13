@@ -25,13 +25,13 @@
 	margin-bottom: 30px;
 }
 
-.textbox {
+.divInput {
 	position: relative;
 	width: 100%;
 	margin-bottom: 20px;
 }
 
-.textbox input {
+.divInput input {
 	width: 100%;
 	padding: 15px;
 	background-color: #f5f5f5;
@@ -41,7 +41,7 @@
 	margin-top: 5px;
 }
 
-.textbox label {
+.divInput label {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -52,8 +52,8 @@
 	transition: all 0.3s ease;
 }
 
-.textbox input:focus ~ label,
-.textbox input:valid ~ label {
+.divInput input:focus ~ label,
+.divInput input:valid ~ label {
 	top: -15px;
 	left: 0;
 	color: #6c63ff;
@@ -83,7 +83,7 @@
 		padding: 30px;
 	}
 
-	.textbox input {
+	.divInput input {
 		font-size: 0.9rem;
 	}
 }

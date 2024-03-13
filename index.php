@@ -29,10 +29,10 @@ if(isset($_SESSION["id"])){
 		<div class="login-box">
 			<h2>Login</h2>
 			<form action="#" id="formInicioSesion">
-				<div class="textbox">
+				<div class="divInput">
 					<input type="text" id="inputNombre" placeholder="Email" />
 				</div>
-				<div class="textbox">
+				<div class="divInput">
 					<input type="password" id="inputPassword" placeholder="Password" />
 				</div>
 				<input class="btn" type="submit" value="Login" />

@@ -1,5 +1,11 @@
-.collapsible {
-	background-color: #777;
+main {
+/*	background-color: red;*/
+	width: 90%;
+	margin: auto;
+}
+
+.buttonDificultad {
+	background-color: #777777;
 	color: white;
 	cursor: pointer;
 	padding: 18px;
@@ -8,14 +14,42 @@
 	text-align: left;
 	outline: none;
 	font-size: 15px;
+	margin-bottom: 25px;
+	border-radius: 15px;
 }
 
-.active, .collapsible:hover {
+.active, .buttonDificultad:hover {
 	background-color: #555;
 }
 
-.collapsible:after {
+.buttonDificultad:after {
 	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.buttonFlag {
+	background-color: #111111;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	margin-bottom: 25px;
+	border-radius: 15px;
+}
+
+.active, .buttonFlag:hover {
+	background-color: #555;
+}
+
+.buttonFlag:after {
+	content: '\27A4';
 	color: white;
 	font-weight: bold;
 	float: right;
