@@ -52,7 +52,6 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 		<h1 class="title" id="title"></h1>
 	</div>
 	<main>
-		
 		<section id="clues" class="sectionInstrucciones">
 			<h2>Instruciones</h2>
 			<p id="pInstruciones"></p>		
@@ -61,17 +60,14 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 			<label class="labelComprobarFlag">Comprobar la respuesta:</label>
 			<div class="divInput">
 				<input type="text" id="inputFlag" name="inputFlag" placeholder="Flag">
+				<p id="pFlagIncorrecto" class="pError">El flag introducido es incorrecto<p>
 			</div>
 			<button id="buttonCheckFlag" class="buttonCheckFlag">Comprobar flag</button>
 		</section>
 		<section id="clues" class="sectionPistas">
 			<h2>Pistas</h2>
-			<ul id="listaPistas" class="listaPistas">
-				<li>Pista 1</li>
-				<li>Pista 2</li>
-				<li>Pista 3</li>
-			</ul>
-			<button class="buttonNuevaPista">Nueva pista</button>
+			<div id="divListaPistas" class="listaPistas"></div>
+			<button id="buttonNuevaPista" class="buttonNuevaPista">Nueva pista</button>
 		</section>
 	</main>
 

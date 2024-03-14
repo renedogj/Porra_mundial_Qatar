@@ -4,9 +4,16 @@ $flag = trim(addslashes($_POST["flag"]));
 
 include_once "../db/db.php";
 
-$sql = "SELECT id, max_puntos, num_pistas FROM flags WHERE id='$idFlag' and flag='$flag'";
+$sql = "SELECT id, max_puntos, num_pistas FROM flags WHERE id='$idFlag' AND flag='$flag'";
 
-$flag = obtenerArraySQL($conexion, $sql)[0];
+$flags = obtenerArraySQL($conexion, $sql);
 
-echo json_encode($flag);
+$json = [];
+if(isset($flags[0])){
+	$json["flagCorrecto"] = true;
+}else{
+	$json["flagCorrecto"] = false;
+}
+
+echo json_encode($json);
 ?>

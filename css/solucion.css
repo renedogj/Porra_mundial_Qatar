@@ -21,17 +21,6 @@ main {
 	font-size: 18px;
 }
 
-/*.sectionComprobarFlag input{
-	width: 90%;
-	padding: 5px;
-	margin: 0 5%;
-}*/
-
-/*.sectionComprobarFlag button {
-	padding: 5px;
-	border-radius: 5px;
-}*/
-
 .divInput {
 	position: relative;
 	width: 100%;
@@ -51,25 +40,6 @@ main {
 	margin-top: 5px;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
-/*
-.divInput label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 15px;
-	font-size: 1rem;
-	color: #6c63ff;
-	background-color: #fff;
-	transition: all 0.3s ease;
-}
-*/
-/*.divInput input:focus ~ label,
-.divInput input:valid ~ label {
-	top: -15px;
-	left: 0;
-	color: #6c63ff;
-	font-size: 0.8rem;
-}*/
 
 .buttonNuevaPista,
 .buttonCheckFlag {
@@ -84,21 +54,13 @@ main {
 	font-size: 1rem;
 	transition: all 0.3s ease;
 	margin: auto;
+	min-width: 150px;
 }
 
 .buttonNuevaPista:hover,
 .buttonCheckFlag:hover {
 	background-color: #5a50a3;
 }
-
-/*.sectionComprobarFlag{
-	width: 90%;
-	margin: auto;
-	background-color: #fff;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-	padding: 40px;
-}*/
 
 .sectionInstrucciones h2,
 .sectionPistas h2{
@@ -107,7 +69,9 @@ main {
 }
 
 .sectionInstrucciones p{
+	width: 90%;
 	padding: 15px;
+	margin: 0 5%;
 }
 
 .listaPistas {
@@ -115,6 +79,20 @@ main {
 	margin: auto;
 }
 
-.listaPistas li {
+.divPista{
+	margin: 2% 0;
+}
+
+.pNoHayPistas{
+	text-align: center;
+	margin: 2%;
+}
+
+.pError{
 	display: none;
+	width: 90%;
+	margin: 2% 5%;
+	text-align: center;
+	color: #CD0000;
+	font-weight: bold;
 }

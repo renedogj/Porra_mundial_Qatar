@@ -5,13 +5,17 @@ $idFlag = trim(addslashes($_POST["idFlag"]));
 
 include_once "../db/db.php";
 
-$sql = "SELECT id, flag, max_puntos, num_pistas, dificultad, instrucciones FROM flags WHERE id='$idFlag'";
+$sqlUpade = "UPDATE usuarios_flags,flags 
+	SET usuarios_flags.num_pistas = usuarios_flags.num_pistas + 1 
+	WHERE usuarios_flags.num_pistas < flags.num_pistas 
+	AND flags.id = '$idFlag'
+	AND usuarios_flags.id_flag = '$idFlag'
+	AND usuarios_flags.id_usuario = '$idUsuario';";
 
-$result = obtenerArraySQL($conexion, $sql);
+$numFilasModificadas = $conexion->exec($sqlUpade);
 
 $json = [];
-if(isset($result[0])){
-	$json["flag"] = $result[0];
+if($numFilasModificadas == 1) {
 
 	$sql = "SELECT pistas.num_pista, pistas.pista 
 		FROM pistas, usuarios_flags 
@@ -22,9 +26,9 @@ if(isset($result[0])){
 
 	$json["pistas"] = obtenerArraySQL($conexion, $sql);
 
-	$json["error"] = false;
+	$json["nuevaPista"] = true;
 }else{
-	$json["error"] = true;
+	$json["nuevaPista"] = false;
 }
 
 echo json_encode($json);
