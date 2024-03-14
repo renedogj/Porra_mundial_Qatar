@@ -1,9 +1,7 @@
 main {
-/*	background-color: red;*/
 	width: 90%;
 	margin: auto;
 }
-
 
 .sectionComprobarFlag,
 .sectionInstrucciones,
@@ -95,4 +93,17 @@ main {
 	text-align: center;
 	color: #CD0000;
 	font-weight: bold;
+}
+
+.h2FlagResuelta{
+	width: 90%;
+	margin: 2% 5%;
+	text-align: center;
+	color: #26DE00;
+}
+
+.pFlagSolucion{
+	width: 90%;
+	margin: 2% 5%;
+	padding: 0 15px;
 }

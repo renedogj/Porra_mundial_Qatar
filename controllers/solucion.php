@@ -56,7 +56,7 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 			<h2>Instruciones</h2>
 			<p id="pInstruciones"></p>		
 		</section>
-		<section class="sectionComprobarFlag">
+		<section class="sectionComprobarFlag" id="sectionComprobarFlag">
 			<label class="labelComprobarFlag">Comprobar la respuesta:</label>
 			<div class="divInput">
 				<input type="text" id="inputFlag" name="inputFlag" placeholder="Flag">
@@ -64,7 +64,7 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 			</div>
 			<button id="buttonCheckFlag" class="buttonCheckFlag">Comprobar flag</button>
 		</section>
-		<section id="clues" class="sectionPistas">
+		<section class="sectionPistas"  id="sectionPistas">
 			<h2>Pistas</h2>
 			<div id="divListaPistas" class="listaPistas"></div>
 			<button id="buttonNuevaPista" class="buttonNuevaPista">Nueva pista</button>
