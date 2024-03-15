@@ -27,7 +27,7 @@ $sql = "SELECT
 	ON partidos.id = apuestas.id_partido and apuestas.id_persona=$id
 	WHERE partidos.id = $idPartido";
 
-$partido = obtenerArraySQL($conexion, $sql)[0];
+$partido = obtenerArraySQL($conexion, $sql);
 
 echo json_encode($partido);
 ?>

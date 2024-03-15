@@ -8,7 +8,7 @@ $.ajax({
 		idPartido: idPartido
 	},
 	success: function(result){
-		partido = result;
+		partido = result[0];
 		$("#div_pais_1").text(partido.nombre_1);
 		$("#div_pais_2").text(partido.nombre_2);
 		$("#bandera_1").attr("src","../img/banderas/"+partido.abreviatura_1+".webp");
