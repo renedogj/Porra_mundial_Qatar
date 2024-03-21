@@ -1,0 +1,1 @@
+{"id":"50","fecha":"03-03-2024 20:00","nombre_1":"Argentina","abreviatura_1":"ARG","grupo_1":"C","nombre_2":"Australia","abreviatura_2":"AUS","grupo_2":"D","ganador":null,"faseGrupos":"2","apuestas":[{"id":"9","nombre":"PABLO","apuesta_1":"3","apuesta_2":"0","puntuacion":null},{"id":"1","nombre":"MANUEL","apuesta_1":"1","apuesta_2":"1","puntuacion":null}]}

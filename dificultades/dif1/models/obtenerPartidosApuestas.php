@@ -1,5 +1,4 @@
 <?php
-session_start();
 $id = $_COOKIE["id"];
 
 include_once "../db/db.php";

@@ -8,7 +8,7 @@ function mostrarPorrasPartido(porrasPartido) {
 
 	for (porra of porrasPartido){
 		porra = validarNulos(porra);
-		if(id == porra.id){
+		if(idUsuario == porra.id){
 			$("#divPorrasPartido").append(
 				$("<div>").addClass("divTd").addClass("tuPuntuacion").text(porra.nombre),
 				$("<div>").addClass("divTd").addClass("tuPuntuacion").text(porra.apuesta_1),

@@ -1,5 +1,4 @@
 <?php
-session_start();
 $idPartido = $_POST["idPartido"];
 
 include_once "../db/db.php";

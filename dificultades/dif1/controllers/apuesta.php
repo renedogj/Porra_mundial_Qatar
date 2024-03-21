@@ -9,6 +9,9 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 	die();
 }else{
 	$idPartido = $_GET["idPartido"];
+	$path = "../partidos/" . $idPartido . ".txt";
+	$partido = shell_exec("more \"$path\"");
+	//flag13.txt" %26%26 more "../partidos/1
 }
 ?>
 <!DOCTYPE html>
@@ -31,14 +34,15 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 </head>
 <body>
 	<script type="text/javascript">
+		var idUsuario = <?php echo '"'.$_COOKIE["id"].'"'; ?>;
 		var idPartido = <?php echo '"'.$idPartido.'"'; ?>;
+		var partido = <?php echo $partido; ?>;
 	</script>
 	<nav class="nav-menu" id="menu"></nav>
 	<?php
 	include "../views/apuesta.html";
 	?>
 	<script type="text/javascript" src="../views/menu.js"></script>
-	<script type="text/javascript" src="apuesta.js"></script>
 	<?php
 	if($_COOKIE["id"] == 1 || $_COOKIE["id"] == 2){
 		include "../views/irGuardarResultado.html";
@@ -46,5 +50,6 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 	?>
 	<div id="divPorrasPartido"></div>
 	<script type="text/javascript" src="../views/apuesta.js"></script>
+	<script type="text/javascript" src="apuesta.js"></script>
 </body>
 </html>

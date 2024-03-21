@@ -1,0 +1,1 @@
+{"id":"51","fecha":"04-03-2024 20:00","nombre_1":"Inglaterra","abreviatura_1":"ENG","grupo_1":"B","nombre_2":"Senegal","abreviatura_2":"SEN","grupo_2":"A","ganador":null,"faseGrupos":"2","apuestas":[{"id":"9","nombre":"PABLO","apuesta_1":"2","apuesta_2":"0","puntuacion":null}]}
