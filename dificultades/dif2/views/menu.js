@@ -26,11 +26,6 @@ $("#menu").append(
 		$("<a>")
 			.attr("href",controllers+"clasificaciones.php")
 			.text("Clasificacion de participantes")
-		),
-	$("<div>").addClass("div-menu-item").append(
-		$("<a>")
-			.attr("href",controllers+"instrucciones.php")
-			.text("Instrucciones")
 		)
 	);
 

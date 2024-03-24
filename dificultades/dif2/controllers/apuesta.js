@@ -7,6 +7,7 @@ $.ajax({
 		idPartido: idPartido
 	},
 	success: function(result){
+		console.log(result);
 		partido = result;
 		$("#div_pais_1").text(partido.nombre_1);
 		$("#div_pais_2").text(partido.nombre_2);
@@ -80,8 +81,9 @@ $("#bttnApostar").click(() => {
 				url: "../models/apostar.php",
 				data: datos,
 				success: function(result){
+					console.log(result);
 					if(!result.error){
-						window.location.assign("partidos.php");
+						alert("Apuesta guardada con éxito");
 					}else{
 						alert("Se ha producido un error al guardar tu porra");
 					}

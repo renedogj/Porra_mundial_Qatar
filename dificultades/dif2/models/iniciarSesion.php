@@ -14,10 +14,10 @@ if(count($usuario) != 0){
 	$usuario = $usuario[0];
 	
 
-	setcookie("id", $usuario["id"], time() + 86400, "/mundial%20qatar/dificultades/dif1/");
-	setcookie("nombre", $usuario["nombre"], time() + 86400, "/mundial%20qatar/dificultades/dif1/");
-	setcookie("puntuacion", $usuario["puntuacion"], time() + 86400, "/mundial%20qatar/dificultades/dif1/");
-	setcookie("email", $usuario["email"], time() + 86400, "/mundial%20qatar/dificultades/dif1/");
+	setcookie("id", $usuario["id"], time() + 86400, "/mundial%20qatar/dificultades/dif2/");
+	setcookie("nombre", $usuario["nombre"], time() + 86400, "/mundial%20qatar/dificultades/dif2/");
+	setcookie("puntuacion", $usuario["puntuacion"], time() + 86400, "/mundial%20qatar/dificultades/dif2/");
+	setcookie("email", $usuario["email"], time() + 86400, "/mundial%20qatar/dificultades/dif2/");
 
 }else{
 	$json["error"] = true;
