@@ -20,7 +20,7 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mundial de Qatar</title>
+	<title>Mundial de fútbol</title>
 	<meta name=author content="Javier Renedo">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">

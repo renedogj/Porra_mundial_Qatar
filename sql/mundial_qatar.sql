@@ -17,6 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+DROP TABLE apuestas;
+DROP TABLE apuestas_clasificacion;
+DROP TABLE partidos;
+DROP TABLE paises;
+DROP TABLE personas;
+
 --
 -- Base de datos: `mundial_qatar`
 --

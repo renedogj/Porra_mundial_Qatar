@@ -17,7 +17,7 @@ if(isset($_COOKIE["id"])){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mundial de Qatar</title>
+	<title>Mundial de fútbol</title>
 	<meta name=author content="Javier Renedo">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -39,9 +39,7 @@ if(isset($_COOKIE["id"])){
 			<nav class="nav-menu" id="menu"></nav>
 		</div>
 		<div class="div-inicio-titulo">
-			<h1 class="h1-inicio-titulo">Mundial de Qatar 2022</h1>
-			<br>
-			<p>Proyecto desarrollado por Javier Renedo González y Carlos Renedo González</p>
+			<h1 class="h1-inicio-titulo">Mundial de futbol</h1>
 		</div>
 		<div class="div-inicioSesion">	
 			<?php
