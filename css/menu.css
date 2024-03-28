@@ -4,11 +4,12 @@ nav {
 	background-color: #e5e5e5;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 
 .nav-menu {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -22,4 +23,9 @@ nav {
 	text-decoration: none;
 	color: #333;
 	font-size: 1.2rem;
+}
+
+.nav-button{
+	width: auto;
+	width: 20px;
 }

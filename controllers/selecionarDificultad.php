@@ -47,6 +47,7 @@ if(isset($_SESSION["id"])){
 				<a href="../controllers/soluciones.php" class="nav-link">Soluciones</a>
 			</li>
 		</ul>
+		<button class="bttn nav-bttn" id="bttnRestaurarDDBB">Restaurar la base de datos</button>
 	</nav>
 	<div class="title-container">
 		<h1 class="title">Title</h1>
@@ -56,17 +57,17 @@ if(isset($_SESSION["id"])){
 			<div class="option">
 				<h3>Dificultad 1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button onclick="abrirDificultad(1)">Seleccionar</button>
+				<button class="bttn" onclick="abrirDificultad(1)">Seleccionar</button>
 			</div>
 			<div class="option">
 				<h3>Dificultad 2</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button onclick="abrirDificultad(2)">Seleccionar</button>
+				<button class="bttn" onclick="abrirDificultad(2)">Seleccionar</button>
 			</div>
 			<div class="option">
 				<h3>Dificultad 3</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<button onclick="abrirDificultad(3)">Seleccionar</button>
+				<button class="bttn" onclick="abrirDificultad(3)">Seleccionar</button>
 			</div>
 		</div>
 	</main>

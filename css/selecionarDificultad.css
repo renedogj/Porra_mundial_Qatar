@@ -51,9 +51,12 @@
 	text-align: center;
 }
 
-.option button {
-	display: block;
+.option button{
 	width: 100%;
+}
+
+.bttn {
+	display: block;
 	padding: 10px;
 	background-color: #6c63ff;
 	color: #fff;
@@ -64,7 +67,7 @@
 	transition: all 0.3s ease;
 }
 
-.option button:hover {
+.bttn:hover {
 	background-color: #5a50a3;
 }
 
