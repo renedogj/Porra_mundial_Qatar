@@ -36,15 +36,19 @@ if(isset($_SESSION["id"])){
 	<nav>
 		<ul class="nav-menu">
 			<li class="nav-item">
-				<a href="#" class="nav-link">Puntuación: <?php echo $_SESSION["puntuacion"]; ?></a>
-			</li>
-
-			<li class="nav-item">
 				<a href="#" class="nav-link">Usuario: <?php echo $_SESSION["nombre"]; ?></a>
 			</li>
 
 			<li class="nav-item">
-				<a href="../controllers/soluciones.php" class="nav-link">Soluciones</a>
+				<a href="#" class="nav-link">Puntuación: <?php echo $_SESSION["puntuacion"]; ?></a>
+			</li>
+
+			<li class="nav-item">
+				<a href="../controllers/soluciones.php" class="nav-link">Flags</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="./" id="bttn-cerrarSesion" class="nav-link">Cerrar Sessión</a>
 			</li>
 		</ul>
 		<button class="bttn nav-bttn" id="bttnRestaurarDDBB">Restaurar la base de datos</button>

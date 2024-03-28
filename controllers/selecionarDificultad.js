@@ -1,3 +1,14 @@
+$("#bttn-cerrarSesion").click(() => {
+	$.ajax({
+		method: "POST",
+		url: "../models/cerrarSesion.php",
+		success: function(infoUsuario){
+			location.reload();
+		},
+		dataType: "text"
+	});
+});
+
 $("#bttnRestaurarDDBB").click(() => {
 	if(confirm("¿Seguro que quieres restaurar la base de datos?")){
 		$.ajax({
