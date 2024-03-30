@@ -41,15 +41,9 @@
 	margin-top: 5px;
 }
 
-.divInput label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 15px;
-	font-size: 1rem;
-	color: #6c63ff;
-	background-color: #fff;
-	transition: all 0.3s ease;
+.login-box label{
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
 .divInput input:focus ~ label,

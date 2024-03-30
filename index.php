@@ -36,10 +36,13 @@ if(isset($_SESSION["id"])){
 					<input type="password" id="inputPassword" placeholder="Password" />
 				</div>
 				<input class="btn" type="submit" value="Login" />
+				<br>
+				<a href="controllers/registrarse.php">No tengo cuenta</a>
 			</form>
 		</div>
 	</div>
 
 	<script type="text/javascript" src="controllers/iniciarSesion.js"></script>
+	<script type="text/javascript" src="controllers/validarFormularios.js"></script>
 </body>
 </html>
