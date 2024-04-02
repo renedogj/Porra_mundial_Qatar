@@ -18,15 +18,12 @@
 			<h2>Register</h2>
 			<form action="#">
 				<div class="textbox">
-					<!-- <i class="fas fa-user"></i> -->
 					<input type="text" name="username" placeholder="Username">
 				</div>
 				<div class="textbox">
-					<!-- <i class="fas fa-user"></i> -->
 					<input type="email" name="email" placeholder="Email"/>
 				</div>
 				<div class="textbox">
-					<!-- <i class="fas fa-user"></i> -->
 					<input type="password" name="password" placeholder="Password"/>
 				</div>
 				<button type="submit" class="btn">Register</button>

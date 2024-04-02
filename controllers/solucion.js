@@ -6,7 +6,6 @@ $.ajax({
 		idFlag: idFlag,
 	},
 	success: function(result){
-		console.log(result);
 		if(!result.error){ 
 			totalPistas = parseInt(result.flag.num_pistas);
 			setInfoFlag(result.flag);
@@ -14,7 +13,6 @@ $.ajax({
 			if(result.flag.resuelto == 1){
 				setFlagResuelta(result.flag.flag);
 			}
-
 		}else{
 			window.location.assign("soluciones.php");
 		}
@@ -35,9 +33,8 @@ $("#buttonCheckFlag").click(() => {
 				flag: inputFlag
 			},
 			success: function(result){
-				console.log(result);
 				if(result.flagCorrecto) {
-					setFlagResuelta(result.flag);
+					location.reload();
 				} else{
 					$("#pFlagIncorrecto").show();
 				}

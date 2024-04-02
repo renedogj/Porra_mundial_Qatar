@@ -1,7 +1,7 @@
 <?php
 include_once "../db/db.php";
 
-$sql = "SELECT id, flag, max_puntos, num_pistas, dificultad FROM flags";
+$sql = "SELECT id, flag, num_pistas, dificultad FROM flags";
 
 $flags = obtenerArraySQL($conexion, $sql);
 
