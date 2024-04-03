@@ -19,4 +19,13 @@ function obtenerArraySQL($conexion, $sql){
 	//return new RecursiveArrayIterator($stmt->fetchAll());
 	return $stmt->fetchAll();
 }
+
+function checkBlackList($text, $blackList) {
+	foreach($blackList as $word){
+		if(substr_count($text, $word) != 0){
+			return false;
+		}
+	}
+	return true;
+}
 ?>

@@ -4,6 +4,17 @@ $id = $_COOKIE["id"];
 $idPartido = $_POST["idPartido"];
 include_once "../db/db.php";
 
+$blackList = ["user","version", "database", "VERSION", "Version", "DATABASE", "Database", "DataBase", "DUAl", "Dual", "dual", "DUal", "DUAl", "dUAL", "dUal", "dUAl", "duaL", "duAl", "duAL", "duAl", "User", "uSer", "USER", "useR", "or", "Or", "oR", "OR", "WHERE", "where", "Where", "=", "NULL", "Null", "null", "NUll", "NuLL", "nUll", "nuLL", "mULL", "NuLl", "NuLL"];
+$auxIdPartido = strtolower($idPartido);
+
+if(!checkBlackList($auxIdPartido, $blackList) && is_int($idPartido) == 1){
+	$idPartido = "";
+}
+
+if(!checkBlackList($auxId, $blackList)){
+	$id = "";
+}
+
 $sql = "SELECT 
 	partidos.id,
 	partidos.fecha,

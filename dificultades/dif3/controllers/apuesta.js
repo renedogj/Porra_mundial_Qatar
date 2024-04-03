@@ -1,4 +1,3 @@
-var partido;
 var fechaPartido;
 $.ajax({
 	method: "POST",
@@ -6,39 +5,9 @@ $.ajax({
 	data: {
 		idPartido: idPartido
 	},
-	success: function(result){
-		partido = result;
-		$("#div_pais_1").text(partido.nombre_1);
-		$("#div_pais_2").text(partido.nombre_2);
-		$("#bandera_1").attr("src","../img/banderas/"+partido.abreviatura_1+".webp");
-		$("#bandera_2").attr("src","../img/banderas/"+partido.abreviatura_2+".webp");
-		$("#inputApuesta_1").val(partido.apuesta_1);
-		$("#inputApuesta_2").val(partido.apuesta_2);
-		$("#labelGanador_1").text(partido.abreviatura_1);
-		$("#labelGanador_2").text(partido.abreviatura_2);
-		fechaPartido = new Date(partido.fecha);
-		//Si el partido no es de fase de grupos (!= 1) 
-		//y el resultado es un empate mostrar ganador en penaltis
-		if(partido.faseGrupos != 1){
-			if($("#inputApuesta_2").val() != "" && $("#inputApuesta_1").val() != ""){
-				if($("#inputApuesta_1").val() == $("#inputApuesta_2").val()){
-					$("#divInputGanador").css("display","flex");
-				}else{
-					$("#divInputGanador").css("display","none");
-				}
-				//Seleccionar quien es el ganador en penaltis
-				if(partido.ganador == 1){
-					$("#ganador_1").prop("checked", true);
-				}else{
-					$("#ganador_2").prop("checked", true);
-				}
-			}
-		}	
-	},
 	error(xhr,status,error){
 		alert("Se ha producido un error");
 		console.log(error);
-		window.location.assign("../");
 	},
 	dataType: "json",
 	async: false
@@ -99,27 +68,33 @@ $("#bttnApostar").click(() => {
 	}
 })
 
-if(fechaPartido < new Date().getTime()){
-	$("#bttnApostar").hide();
-	$.ajax({
-		method: "POST",
-		url: "../models/obtenerApuestasPartido.php",
-		data: {
-			idPartido : idPartido,
-		},
-		success: function(result){
-			console.log(result);
-			porrasPartido = result["porrasPartido"];
-			id = result["id"];
-			mostrarPorrasPartido(porrasPartido);
-			comprobarEmpate();
-		},
-		error(xhr,status,error){
-			console.error(error)
-		},
-		dataType: "json"
-	});
-}
+$("#bttnApostar").hide();
+$("#div_pais_1").text(partido.nombre_1);
+$("#div_pais_2").text(partido.nombre_2);
+$("#bandera_1").attr("src","../img/banderas/"+partido.abreviatura_1+".webp");
+$("#bandera_2").attr("src","../img/banderas/"+partido.abreviatura_2+".webp");
+$("#labelGanador_1").text(partido.abreviatura_1);
+$("#labelGanador_2").text(partido.abreviatura_2);
+fechaPartido = new Date(partido.fecha);
+//Si el partido no es de fase de grupos (!= 1) 
+//y el resultado es un empate mostrar ganador en penaltis
+if(partido.faseGrupos != 1){
+	if($("#inputApuesta_2").val() != "" && $("#inputApuesta_1").val() != ""){
+		if($("#inputApuesta_1").val() == $("#inputApuesta_2").val()){
+			$("#divInputGanador").css("display","flex");
+		}else{
+			$("#divInputGanador").css("display","none");
+		}
+		//Seleccionar quien es el ganador en penaltis
+		if(partido.ganador == 1){
+			$("#ganador_1").prop("checked", true);
+		}else{
+			$("#ganador_2").prop("checked", true);
+		}
+	}
+}	
+mostrarPorrasPartido(partido.apuestas);
+comprobarEmpate();
 
 var intervalCountDownFechaPartido = setInterval(() => {
 	var now = new Date().getTime();

@@ -9,9 +9,18 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 	die();
 }else{
 	$idPartido = $_GET["idPartido"];
+
+	include_once "../db/db.php";
+
+	$blackList = ["whoami", "pwd"];
+
+	$auxIdPartido = strtolower($idPartido);
+	if(!checkBlackList($auxIdPartido, $blackList)){
+		$idPartido = "";
+	}
+
 	$path = "../partidos/" . $idPartido . ".txt";
-	$partido = shell_exec("more \"$path\"");
-	//flag13.txt" %26%26 more "../partidos/1
+	$partido = shell_exec("cat \"$path\"");
 }
 ?>
 <!DOCTYPE html>

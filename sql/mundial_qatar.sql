@@ -1368,7 +1368,7 @@ INSERT INTO `personas` (`id`, `nombre`, `password`, `puntuacion`, `email`) VALUE
 (19, 'ANTONIO', '8a365abf96b7b214c96b04f728386927', 61, 'antonio@gmail.com'),
 (20, 'ENRIQUE', '33c291725f1c643127e2d102bc58cac2', 25, 'enrique@gmail.com'),
 (21, 'MARTA', '6b63107461ecfdbec673393ce7aca1ec', 62, 'marta@gmail.com'),
-(22, 'SARA', 'a9ce9e4e3113dd676582e8952353cc84', 43, 'sara@gmail.com'),
+(22, 'SARA', 'aa87ddc5b4c24406d26ddad771ef44b0', 43, 'sara@gmail.com'),
 (23, 'ANA', '9bfdb9e8f14091b295bc397110c16f6a', 2, 'ana@gmail.com'),
 (25, 'RAMON', '4c42ffe935f078df63b857af8a2a368c', 9, 'ramon@gmail.com'),
 (26, 'PAULA', '125cd80926d4c357727dc52ebfafb1dc', 16, 'paula@gmail.com'),

@@ -35,6 +35,7 @@ if(isset($_SESSION["id"])){
 				<div class="divInput">
 					<input type="password" id="inputPassword" placeholder="Password" />
 				</div>
+				<label id="label-inicioIncorrecto" class="label-fallo-inicio error"></label>
 				<input class="btn" type="submit" value="Login" />
 				<br>
 				<a href="controllers/registrarse.php">No tengo cuenta</a>

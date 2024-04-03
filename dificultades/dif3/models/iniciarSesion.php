@@ -4,23 +4,32 @@ $password = MD5(trim($_POST["password"]));
 
 include_once "../db/db.php";
 
-$sql = "SELECT id, nombre, email, puntuacion FROM personas WHERE email='$email' and password='$password'";
+$blackList = ['"',"'", "select", "from", "where", "order", "having", "group", "insert", "delete", "update", "drop", "-"];
 
-$usuario = obtenerArraySQL($conexion, $sql);
+$auxEmail = strtolower($email);
+$auxPassword = strtolower($password);
 
 $json = [];
-if(count($usuario) != 0){
-	$json["error"] = false;
-	$usuario = $usuario[0];
-	
+if(checkBlackList($auxEmail, $blackList) && checkBlackList($auxPassword, $blackList)) {
+	$sql = "SELECT id, nombre, email, puntuacion FROM personas WHERE email='$email' and password='$password'";
 
-	setcookie("id", $usuario["id"], time() + 86400, "/mundial%20qatar/dificultades/dif3/");
-	setcookie("nombre", $usuario["nombre"], time() + 86400, "/mundial%20qatar/dificultades/dif3/");
-	setcookie("puntuacion", $usuario["puntuacion"], time() + 86400, "/mundial%20qatar/dificultades/dif3/");
-	setcookie("email", $usuario["email"], time() + 86400, "/mundial%20qatar/dificultades/dif3/");
+	$usuario = obtenerArraySQL($conexion, $sql);
 
+	if(count($usuario) != 0){
+		$json["error"] = false;
+		$usuario = $usuario[0];
+
+		setcookie("id", $usuario["id"], time() + 86400, "/dificultades/dif3/");
+		setcookie("nombre", $usuario["nombre"], time() + 86400, "/dificultades/dif3/");
+		setcookie("puntuacion", $usuario["puntuacion"], time() + 86400, "/dificultades/dif3/");
+		setcookie("email", $usuario["email"], time() + 86400, "/dificultades/dif3/");
+	}else{
+		$json["error"] = true;
+	}	
 }else{
 	$json["error"] = true;
 }
+
+
 echo json_encode($json);
 ?>

@@ -1,0 +1,1 @@
+{"id":"52","fecha":"04-03-2024 16:00","nombre_1":"Francia","abreviatura_1":"FRA","grupo_1":"D","nombre_2":"Polonia","abreviatura_2":"POL","grupo_2":"C","ganador":null,"faseGrupos":"2","apuestas":[{"id":"9","nombre":"PABLO","apuesta_1":"1","apuesta_2":"0","puntuacion":null}]}

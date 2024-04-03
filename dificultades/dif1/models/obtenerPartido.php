@@ -1,7 +1,20 @@
 <?php
 $id = $_COOKIE["id"];
 $idPartido = $_POST["idPartido"];
+
 include_once "../db/db.php";
+
+$blackList = ["version", "database"];
+$auxIdPartido = strtolower($idPartido);
+$auxId = strtolower($id);
+
+if(!checkBlackList($auxIdPartido, $blackList)){
+	$idPartido = "";
+}
+
+if(!checkBlackList($auxId, $blackList) && is_int($id) == 1){
+	$id = "";
+}
 
 $sql = "SELECT 
 	partidos.id,

@@ -1,5 +1,4 @@
 var partido;
-console.log(partido)
 var fechaPartido;
 $.ajax({
 	method: "POST",
@@ -8,6 +7,7 @@ $.ajax({
 		idPartido: idPartido
 	},
 	success: function(result){
+		console.log(result)
 		let partido = result[0];
 		$("#div_pais_1").text(partido.nombre_1);
 		$("#div_pais_2").text(partido.nombre_2);
@@ -34,13 +34,11 @@ $.ajax({
 					$("#ganador_2").prop("checked", true);
 				}
 			}
-		}
-		console.log(partido);	
+		}	
 	},
 	error(xhr,status,error){
 		alert("Se ha producido un error");
 		console.log(error);
-		// window.location.assign("../");
 	},
 	dataType: "json",
 	async: false
@@ -103,27 +101,8 @@ $("#bttnApostar").click(() => {
 
 if(fechaPartido < new Date().getTime()){
 	$("#bttnApostar").hide();
-	console.log(partido.apuestas);
 	mostrarPorrasPartido(partido.apuestas);
 	comprobarEmpate();
-	// $.ajax({
-	// 	method: "POST",
-	// 	url: "../models/obtenerApuestasPartido.php",
-	// 	data: {
-	// 		idPartido : idPartido,
-	// 	},
-	// 	success: function(result){
-	// 		console.log(result);
-	// 		porrasPartido = result["porrasPartido"];
-	// 		id = result["id"];
-	// 		mostrarPorrasPartido(porrasPartido);
-	// 		comprobarEmpate();
-	// 	},
-	// 	error(xhr,status,error){
-	// 		console.error(error)
-	// 	},
-	// 	dataType: "json"
-	// });
 }
 
 var intervalCountDownFechaPartido = setInterval(() => {

@@ -12,6 +12,7 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 	$_SESSION["puntuacion"] = $usuario["puntuacion"];
 
 }else{
+	echo "A";
 	session_unset();
 	session_destroy();
 	header("Location: ../");

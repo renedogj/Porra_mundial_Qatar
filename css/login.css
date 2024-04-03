@@ -54,6 +54,13 @@
 	font-size: 0.8rem;
 }
 
+.label-fallo-inicio{
+	color: rgba(255, 150, 150);
+	font-size: 1em;
+	font-weight: 600;
+	text-align: center;
+}
+
 .btn {
 	display: block;
 	width: 100%;

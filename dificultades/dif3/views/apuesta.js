@@ -8,13 +8,15 @@ function mostrarPorrasPartido(porrasPartido) {
 
 	for (porra of porrasPartido){
 		porra = validarNulos(porra);
-		if(id == porra.id){
+		if(idUsuario == porra.id){
 			$("#divPorrasPartido").append(
 				$("<div>").addClass("divTd").addClass("tuPuntuacion").text(porra.nombre),
 				$("<div>").addClass("divTd").addClass("tuPuntuacion").text(porra.apuesta_1),
 				$("<div>").addClass("divTd").addClass("tuPuntuacion").text(porra.apuesta_2),
 				$("<div>").addClass("divTd").addClass("tuPuntuacion").text(porra.puntuacion),
 			);
+			$("#inputApuesta_1").val(porra.apuesta_1);
+			$("#inputApuesta_2").val(porra.apuesta_2);
 		}else{
 			$("#divPorrasPartido").append(
 				$("<div>").addClass("divTd").text(porra.nombre),
