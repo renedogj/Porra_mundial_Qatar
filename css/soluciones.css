@@ -5,8 +5,8 @@ main {
 }
 
 .buttonDificultad {
-	background-color: #777777;
-	color: white;
+	background-color: #6c63ff;
+	color: #fff;
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
@@ -19,7 +19,7 @@ main {
 }
 
 .active, .buttonDificultad:hover {
-	background-color: #555;
+	background-color: #5a50a3;
 }
 
 .buttonDificultad:after {
@@ -31,7 +31,7 @@ main {
 }
 
 .buttonFlag {
-	background-color: #111111;
+	background-color: #082BCA;
 	color: white;
 	cursor: pointer;
 	padding: 18px;
@@ -45,7 +45,7 @@ main {
 }
 
 .active, .buttonFlag:hover {
-	background-color: #555;
+	background-color: #3859EF;
 }
 
 .buttonFlag:after {
@@ -61,7 +61,7 @@ main {
 }
 
 .content {
-	padding: 0 18px;
+	padding: 0 4%;
 	display: none;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
