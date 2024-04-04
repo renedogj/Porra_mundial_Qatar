@@ -7,7 +7,7 @@ $.ajax({
 		idPartido: idPartido
 	},
 	success: function(result){
-		partido = result;
+		partido = result[0];
 		$("#div_pais_1").text(partido.nombre_1);
 		$("#div_pais_2").text(partido.nombre_2);
 		$("#bandera_1").attr("src","../img/banderas/"+partido.abreviatura_1+".webp");
@@ -38,7 +38,6 @@ $.ajax({
 	error(xhr,status,error){
 		alert("Se ha producido un error");
 		console.log(error);
-		window.location.assign("../");
 	},
 	dataType: "json",
 	async: false
@@ -80,7 +79,6 @@ $("#bttnApostar").click(() => {
 				url: "../models/apostar.php",
 				data: datos,
 				success: function(result){
-					console.log(result);
 					if(!result.error){
 						alert("Apuesta guardada con éxito");
 					}else{
@@ -109,7 +107,6 @@ if(fechaPartido < new Date().getTime()){
 			idPartido : idPartido,
 		},
 		success: function(result){
-			console.log(result);
 			porrasPartido = result["porrasPartido"];
 			id = result["id"];
 			mostrarPorrasPartido(porrasPartido);

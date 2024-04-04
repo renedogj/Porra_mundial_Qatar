@@ -4,6 +4,13 @@ $idPartido = $_POST["idPartido"];
 
 include_once "../db/db.php";
 
+$blackList = ["user","version", "database", "dual"];
+$auxIdPartido = strtolower($idPartido);
+
+if(!checkBlackList($auxIdPartido, $blackList)){
+	$idPartido = "";
+}
+
 $json = [];
 
 $sql = "SELECT 

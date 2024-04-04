@@ -7,11 +7,11 @@ include_once "../db/db.php";
 $blackList = ["user","version", "database", "VERSION", "Version", "DATABASE", "Database", "DataBase", "DUAl", "Dual", "dual", "DUal", "DUAl", "dUAL", "dUal", "dUAl", "duaL", "duAl", "duAL", "duAl", "User", "uSer", "USER", "useR", "or", "Or", "oR", "OR", "WHERE", "where", "Where", "=", "NULL", "Null", "null", "NUll", "NuLL", "nUll", "nuLL", "mULL", "NuLl", "NuLL"];
 $auxIdPartido = strtolower($idPartido);
 
-if(!checkBlackList($auxIdPartido, $blackList) && is_int($idPartido) == 1){
+if(!checkBlackList($auxIdPartido, $blackList) || is_int($idPartido) == 1){
 	$idPartido = "";
 }
 
-if(!checkBlackList($auxId, $blackList)){
+if(!checkBlackList($id, $blackList)){
 	$id = "";
 }
 
@@ -35,10 +35,9 @@ $sql = "SELECT
 	LEFT JOIN paises as paises_2
 	ON partidos.id_pais_2 = paises_2.id
 	LEFT JOIN apuestas
-	ON partidos.id = apuestas.id_partido and apuestas.id_persona=$id
-	WHERE partidos.id = $idPartido";
+	ON partidos.id = apuestas.id_partido and apuestas.id_persona=$id WHERE partidos.id = $idPartido";
 
-$partido = obtenerArraySQL($conexion, $sql)[0];
+$partido = obtenerArraySQL($conexion, $sql);
 
 echo json_encode($partido);
 ?>

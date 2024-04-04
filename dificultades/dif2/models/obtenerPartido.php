@@ -2,16 +2,17 @@
 session_start();
 $id = $_COOKIE["id"];
 $idPartido = $_POST["idPartido"];
+
 include_once "../db/db.php";
 
-$blackList = ["user","version", "database", "VERSION", "Version", "DATABASE", "Database", "DataBase", "DUAl", "Dual", "dual", "DUal", "DUAl", "dUAL", "dUal", "dUAl", "duaL", "duAl", "duAL", "duAl"];
+$blackList = ["user", "USER", "User", "UseR", "database", "DATABASE", "Database", "DataBase", "dataBase", "DUAl", "Dual", "dual", "DUal", "DUAl", "dUAL", "dUal", "dUAl", "duaL", "duAl", "duAL", "duAl"];
 $auxId = strtolower($id);
 
-if(!checkBlackList($auxIdPartido, $blackList)){
+if(!checkBlackList($idPartido, $blackList)){
 	$idPartido = "";
 }
 
-if(!checkBlackList($auxId, $blackList) && is_int($id) = 1){
+if(!checkBlackList($auxId, $blackList) && is_int($id) == 1){
 	$id = "";
 }
 
@@ -38,7 +39,7 @@ $sql = "SELECT
 	ON partidos.id = apuestas.id_partido and apuestas.id_persona=$id
 	WHERE partidos.id = $idPartido";
 
-$partido = obtenerArraySQL($conexion, $sql)[0];
+$partido = obtenerArraySQL($conexion, $sql);
 
 echo json_encode($partido);
 ?>

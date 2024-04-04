@@ -5,7 +5,7 @@ function mostrarPorrasPartido(porrasPartido) {
 		$("<div>").addClass("divTh").text("Porra"),
 		$("<div>").addClass("divTh").text("Puntuacion"),
 	);
-
+	var divPorrasPartido = document.getElementById("divPorrasPartido");
 	for (porra of porrasPartido){
 		porra = validarNulos(porra);
 		if(id == porra.id){
@@ -16,12 +16,10 @@ function mostrarPorrasPartido(porrasPartido) {
 				$("<div>").addClass("divTd").addClass("tuPuntuacion").text(porra.puntuacion),
 			);
 		}else{
-			$("#divPorrasPartido").append(
-				$("<div>").addClass("divTd").text(porra.nombre),
-				$("<div>").addClass("divTd").text(porra.apuesta_1),
-				$("<div>").addClass("divTd").text(porra.apuesta_2),
-				$("<div>").addClass("divTd").text(porra.puntuacion),
-			);
+			divPorrasPartido.innerHTML += '<div class="divTd">'+porra.nombre+'</div>';
+			divPorrasPartido.innerHTML += '<div class="divTd">'+porra.apuesta_1+'</div>';
+			divPorrasPartido.innerHTML += '<div class="divTd">'+porra.apuesta_2+'</div>';
+			divPorrasPartido.innerHTML += '<div class="divTd">'+porra.puntuacion+'</div>';
 		}
 	}
 }

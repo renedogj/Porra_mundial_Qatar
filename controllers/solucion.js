@@ -13,8 +13,6 @@ $.ajax({
 			if(result.flag.resuelto == 1){
 				setFlagResuelta(result.flag.flag);
 			}
-		}else{
-			window.location.assign("soluciones.php");
 		}
 	},error(xhr,status,error){
 		console.error(error);
@@ -103,6 +101,15 @@ function setInfoPistas(pistas){
 	}
 
 	if(pistas.length == totalPistas){
-		$("#buttonNuevaPista").remove();
+
+		if(totalPistas == 0){
+			$("#sectionPistas").remove();
+		}else{
+			$("#buttonNuevaPista").remove();
+
+			$("#divListaPistas").append(
+				$("<p>").addClass("pNoHayPistas").text("No hay más pistas")
+			);
+		}
 	}
 }
