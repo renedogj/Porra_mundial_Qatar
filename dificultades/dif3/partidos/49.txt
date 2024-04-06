@@ -1,1 +1,0 @@
-{"id":"49","fecha":"03-03-2023 16:00","nombre_1":"Pa\u00edses Bajos","abreviatura_1":"NED","grupo_1":"A","nombre_2":"Estados Unidos","abreviatura_2":"USA","grupo_2":"B","ganador":"1","faseGrupos":"2","apuestas":[{"id":"9","nombre":"PABLO","apuesta_1":"2","apuesta_2":"1","puntuacion":"6"}]}

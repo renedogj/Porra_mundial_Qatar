@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $db_password = "";
-$database = "tfm_gestion";
+$database = "mundial_qatar";
 
 try {
 	$conexion = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $db_password); 	 	 	 	 	 	

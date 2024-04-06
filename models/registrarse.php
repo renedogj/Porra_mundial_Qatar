@@ -1,5 +1,6 @@
 <?php
 session_start();
+$email = trim(addslashes($_POST["email"]));
 $nombre = trim(addslashes($_POST["nombre"]));
 $pwd = MD5(trim($_POST["password"]));
 
@@ -7,22 +8,18 @@ include_once "../db/db.php";
 
 $json = [];
 try {
-	$sql = "INSERT INTO usuarios (nombre, password) VALUES ('$nombre','$pwd')";
+	$sql = "INSERT INTO personas (email, nombre, password) VALUES ('$email','$nombre','$pwd')";
 	
-	$result = $conexion->exec($sql);
-
-	if($result == 1){
-
+	$conexion->exec($sql);
 	
 	$id = $conexion->lastInsertId();
 
-		$json["error"] = false;
-
-		$_SESSION["id"] = $id;
-		$_SESSION["nombre"] = $nombre;
-		$_SESSION["puntuacion"] = 0;
-	}
-
+	$json["error"] = false;
+	
+	$_SESSION["id"] = $id;
+	$_SESSION["nombre"] = $nombre;
+	$_SESSION["puntuacion"] = 0;
+	$_SESSION["email"] = $email;
 
 } catch(PDOException $e) {
 	$json["error"] = true;

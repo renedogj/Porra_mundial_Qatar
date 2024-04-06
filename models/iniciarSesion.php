@@ -1,11 +1,12 @@
 <?php
 session_start();
-$nombre = trim(addslashes($_POST["nombre"]));
+$email = trim(addslashes($_POST["email"]));
 $password = MD5(trim($_POST["password"]));
+//$password = trim($_POST["password"]);
 
 include_once "../db/db.php";
 
-$sql = "SELECT id, nombre, puntuacion FROM usuarios WHERE nombre='$nombre' and password='$password'";
+$sql = "SELECT id, nombre, email, puntuacion FROM personas WHERE email='$email' and password='$password'";
 
 $usuario = obtenerArraySQL($conexion, $sql);
 
@@ -17,8 +18,7 @@ if(count($usuario) != 0){
 	$_SESSION["id"] = $usuario["id"];
 	$_SESSION["nombre"] = $usuario["nombre"];
 	$_SESSION["puntuacion"] = $usuario["puntuacion"];
-
-	$json["session"] = $_SESSION;
+	$_SESSION["email"] = $email;
 }else{
 	$json["error"] = true;
 }

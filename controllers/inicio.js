@@ -1,7 +1,7 @@
 $("#formInicioSesion").submit(() => {
 	if($("#formInicioSesion").valid()){
 		var datosInicioSesion = {};
-		datosInicioSesion["nombre"] = $("#inputNombre").val();
+		datosInicioSesion["email"] = $("#inputEmail").val();
 		datosInicioSesion["password"] = $("#inputPassword").val();
 
 		$.ajax({
@@ -11,7 +11,7 @@ $("#formInicioSesion").submit(() => {
 			success: function(result){
 				console.log(result)
 				if(!result.error){
-					// location.reload();
+					location.reload();
 				}else{
 					$("#label-inicioIncorrecto").text("Email o Contraseña incorrectos");
 					$("#label-inicioIncorrecto").show();
@@ -23,4 +23,15 @@ $("#formInicioSesion").submit(() => {
 		});
 	}
 	return false;
+});
+
+$("#bttn-cerrarSesion").click(() => {
+	$.ajax({
+		method: "POST",
+		url: "models/cerrarSesion.php",
+		success: function(infoUsuario){
+			location.reload();
+		},
+		dataType: "text"
+	});
 });
