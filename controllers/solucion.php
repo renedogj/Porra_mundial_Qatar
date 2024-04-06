@@ -54,7 +54,7 @@ if(isset($_SESSION["id"]) && isset($_GET["idFlag"])){
 	</div>
 	<main>
 		<section id="clues" class="sectionInstrucciones">
-			<h2>Instruciones</h2>
+			<h2>Instrucciones</h2>
 			<p id="pInstruciones"></p>		
 		</section>
 		<section class="sectionComprobarFlag" id="sectionComprobarFlag">

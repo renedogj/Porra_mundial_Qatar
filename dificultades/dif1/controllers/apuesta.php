@@ -57,7 +57,7 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 		include "../views/irGuardarResultado.html";
 	}
 	?>
-	<div id="divPorrasPartido"></div>
+	<div id="divPorrasPartido"></div>A
 	<script type="text/javascript" src="../views/apuesta.js"></script>
 	<script type="text/javascript" src="apuesta.js"></script>
 </body>

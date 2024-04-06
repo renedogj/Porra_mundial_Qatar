@@ -19,7 +19,9 @@ if(isset($flags[0])){
 	$numPistasTotales =  $flags[0]["num_pistas"];
 
 	$sql = "UPDATE usuarios_flags SET resuelto = 1, 
+	
 	puntuacion = ((3 * $dificultad) + ($numPistasTotales - num_pistas) * (2 + $dificultad))
+
 	WHERE id_flag='$idFlag' AND id_usuario='$idUsuario'";
 	$conexion->exec($sql);
 }else{

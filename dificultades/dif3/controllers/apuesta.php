@@ -12,13 +12,13 @@ if(!isset($_COOKIE["id"]) || !isset($_GET["idPartido"])){
 
 	include_once "../db/db.php";
 
-	$blackList = ["cat", "less", "head", "tail", "Strings"];
+	$blackList = ["cat", "less", "head", "tail", "Strings", '";"'];
 
 	if(!checkBlackList($idPartido, $blackList)){
 		$idPartido = "";
 	}
 
-	if($idPartido != "flag33"){
+	if($idPartido != "flag33" && $idPartido != 'flag33.txt\";"'){
 		$path = "../partidos/" . $idPartido . ".txt";
 		$partido = shell_exec("cat \"$path\"");
 	}

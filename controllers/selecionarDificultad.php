@@ -54,23 +54,28 @@ if(isset($_SESSION["id"])){
 		<button class="bttn nav-bttn" id="bttnRestaurarDDBB">Restaurar la base de datos</button>
 	</nav>
 	<div class="title-container">
-		<h1 class="title">Title</h1>
+		<h1 class="title">Seleciona dificultad</h1>
+		<br>
+		<p>Logeate con el usurio Carlos</p>
+		<p><b>Email:</b> carlos@gmail.com</p>
+		<p><b>Contraseña:</b> carlos</p>
+		<br>
 	</div>
 	<main class="container">
 		<div class="options">
 			<div class="option">
 				<h3>Dificultad 1</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Entra al CTF en la dificultad 1</p>
 				<button class="bttn" onclick="abrirDificultad(1)">Seleccionar</button>
 			</div>
 			<div class="option">
 				<h3>Dificultad 2</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Entra al CTF en la dificultad 2</p>
 				<button class="bttn" onclick="abrirDificultad(2)">Seleccionar</button>
 			</div>
 			<div class="option">
 				<h3>Dificultad 3</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Entra al CTF en la dificultad 3</p>
 				<button class="bttn" onclick="abrirDificultad(3)">Seleccionar</button>
 			</div>
 		</div>
