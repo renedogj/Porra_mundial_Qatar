@@ -37,7 +37,7 @@ if(isset($_SESSION["id"])){
 			<nav class="nav-menu" id="menu"></nav>
 		</div>
 		<div class="div-inicio-titulo">
-			<h1 class="h1-inicio-titulo">Mundial de Qatar 2022</h1>
+			<h1 class="h1-inicio-titulo">Eurocopa 2024</h1>
 			<br>
 			<p>Proyecto desarrollado por Javier Renedo González y Carlos Renedo González</p>
 		</div>
