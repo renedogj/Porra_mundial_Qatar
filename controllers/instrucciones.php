@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mundial de Qatar - Registrarse</title>
+	<title>Eurocopa 2024</title>
 	<meta name=author content="Javier Renedo">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
@@ -20,7 +20,7 @@
 </head>
 <body>
 	<nav class="nav-menu" id="menu"></nav>
-	<h1>QATAR 2022</h1>
+	<h1>Eurocopa 2024</h1>
 	<h3>Únete a la porra! ⚽</h3>
 	<div class="divContenidoIntrucciones">
 		<p class="textoIncial">Elige tus favoritos, vota los resultados de cada partido, gana puntos y compite contra los demás jugadores. Es totalmente gratuito, solo te juegas tu honor, aunque esto podría cambiar para futuros eventos... </p>

@@ -1,4 +1,4 @@
-fechaInicioMundial = new Date("2022-11-20 17:00");
+fechaInicioCompeticion = new Date("2024-06-14 21:00");
 
 $.ajax({
 	method: "POST",
@@ -9,7 +9,7 @@ $.ajax({
 				$("<option>").val(pais.id).text(pais.nombre)
 			);
 		}
-		if(fechaInicioMundial < new Date().getTime()){
+		if(fechaInicioCompeticion < new Date().getTime()){
 			$(".selectPaises").attr('disabled','disabled');
 		}
 	},
@@ -37,7 +37,7 @@ $.ajax({
 	dataType: "json"
 });
 
-if(fechaInicioMundial < new Date().getTime()){
+if(fechaInicioCompeticion < new Date().getTime()){
 	$("#guardarPorraClasificacion").hide();
 
 	$.ajax({
@@ -57,8 +57,8 @@ if(fechaInicioMundial < new Date().getTime()){
 }
 
 $("#guardarPorraClasificacion").click(() => {
-	if(fechaInicioMundial > new Date().getTime()){
-		if(!hayRepetidos($("#puesto_1").val(),$("#puesto_2").val(),$("#puesto_3").val(),$("#puesto_4").val())){
+	if(fechaInicioCompeticion > new Date().getTime()){
+		if(!hayRepetidos($("#puesto_1").val(), $("#puesto_2").val(), $("#puesto_3").val(), $("#puesto_4").val())){
 			alert("No puedes poner un mismo pais en 2 puestos");
 		}else{
 			$.ajax({
@@ -108,7 +108,7 @@ function hayRepetidos(val1,val2,val3,val4){
 var intervalCountDownFechaPartido = setInterval(() => {
 	var now = new Date().getTime();
 
-	var distance = fechaInicioMundial - now;
+	var distance = fechaInicioCompeticion - now;
 	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));

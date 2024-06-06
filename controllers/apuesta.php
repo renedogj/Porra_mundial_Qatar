@@ -14,7 +14,7 @@ if(!isset($_SESSION["id"]) || !isset($_GET["idPartido"])){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mundial de Qatar</title>
+	<title>Eurocopa 2024</title>
 	<meta name=author content="Javier Renedo">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">

@@ -12,7 +12,7 @@ if(!isset($_SESSION["id"])){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mundial de Qatar</title>
+	<title>Eurocopa 2024</title>
 	<meta name=author content="Javier Renedo">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
@@ -28,7 +28,7 @@ if(!isset($_SESSION["id"])){
 </head>
 <body>
 	<nav class="nav-menu" id="menu"></nav>
-	<h1>Porra clasificación mundial Qatar 2022</h1>
+	<h1>Porra clasificación Eurocopa 2024</h1>
 	<h3 class="contdown">La votación se cierra en: <span id="countdown-timer"></span></h3>
 	<div class="divContenedoraInputPuesto">
 		<div class="divInput_1_2_puesto">
