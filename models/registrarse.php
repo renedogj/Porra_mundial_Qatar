@@ -1,5 +1,4 @@
 <?php
-// header('HTTP/1.1 401 Unauthorized', true, 401);
 session_start();
 $email = trim(addslashes($_POST["email"]));
 $nombre = trim(addslashes($_POST["nombre"]));
