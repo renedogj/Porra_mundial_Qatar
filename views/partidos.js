@@ -61,7 +61,7 @@ function mostrarPartidosPorGrupos(partidos){
 }
 
 function mostrarPartidosPorFecha(partidos){
-	$("#divTablaPartidosPorFecha").addClass("divPartidos").append(
+	$("#divTablaPartidosPorFecha").addClass("divPartidos").addClass("divPartidosFecha").append(
 		$("<div>").addClass("divTh").addClass("divBoton").text(""),
 		$("<div>").addClass("divTh").addClass("divFecha").text("Fecha"),
 		$("<div>").addClass("divTh").addClass("divApuesta").text("Tu porra"),

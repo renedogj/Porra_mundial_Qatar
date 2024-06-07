@@ -31,8 +31,8 @@ if(!isset($_SESSION["id"])){
 	<h3>¡La porra de cada partido se cierra al comienzo del mismo!</h3>
 	<div class="select">
 		<select name="selectDisplay" id="selectDisplay">
-			<option value="fecha">Partidos por fecha</option>
 			<option value="grupo">Partidos por grupo</option>
+			<option value="fecha">Partidos por fecha</option>
 		</select>
 	</div>
 	<div id="divPartidosPorGrupos" class="divContenedorTabla"></div>

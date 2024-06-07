@@ -1,4 +1,5 @@
 .nav-menu{
+/*	background-color: #143CBD;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -23,7 +24,8 @@
 }
 
 .div-menu-item a:hover{
-	color: #1C1C1C;
+/*	color: #1C1C1C;*/
+	color: #95A5A6;
 }
 
 @media(max-width: 800px){
