@@ -22,7 +22,7 @@
 	<h1>Eurocopa 2024</h1>
 	<h3>Únete a la porra! ⚽</h3>
 	<div class="divContenidoIntrucciones">
-		<p class="textoIncial">Elige tus favoritos, vota los resultados de cada partido, gana puntos y compite contra los demás jugadores. El precio es de 2€ y todo lo recaudado irá destinado al proyecto misionero de la <a href="https://www.parroquiasanleandro.es/proyecto-misionero-23-24">parroquia San Leandro</a>.</p>
+		<p class="textoIncial">Elige tus favoritos, vota los resultados de cada partido, gana puntos y compite contra los demás jugadores. El precio es de 2€ y los beneficios irán destinados al proyecto misionero de la <a href="https://www.parroquiasanleandro.es/proyecto-misionero-23-24">Parroquia San Leandro</a>.</p>
 
 		<p class="pPremio">¡El ganador de la porra recibirá una camiseta de la selección española!</p>
 

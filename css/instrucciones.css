@@ -4,8 +4,12 @@
 	text-align: justify;
 }
 
+.divContenidoIntrucciones a{
+	color: blue;
+}
+
 .divContenidoIntrucciones a:hover{
-	color: #EEEEE4;
+	color: var(--second-text-color);
 }
 
 .textoIncial{
