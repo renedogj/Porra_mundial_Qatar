@@ -26,7 +26,7 @@
 
 		<p class="pPremio">¡El ganador de la porra recibirá una camiseta de la selección española!</p>
 
-		<p>Unete al grupo de WhatsApp para estar al día de todas las comunicaciones: <a href="">https://chat.whatsapp.com/F5WFdgttFv2JpAJrav760u </a></p>
+		<p>Unete al grupo de WhatsApp para estar al día de todas las comunicaciones: <a href="https://chat.whatsapp.com/H8ZGAQObxI2LlcjQ6T4SHh">https://chat.whatsapp.com/H8ZGAQObxI2LlcjQ6T4SHh</a></p>
 		<br>
 		<ol>
 			<li>
