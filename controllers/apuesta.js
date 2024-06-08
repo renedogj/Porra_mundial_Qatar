@@ -10,8 +10,8 @@ $.ajax({
 		partido = result;
 		$("#div_pais_1").text(partido.nombre_1);
 		$("#div_pais_2").text(partido.nombre_2);
-		$("#bandera_1").attr("src","../img/banderas/"+partido.abreviatura_1+".webp");
-		$("#bandera_2").attr("src","../img/banderas/"+partido.abreviatura_2+".webp");
+		$("#bandera_1").attr("src","../img/banderas/"+partido.abreviatura_1+".png");
+		$("#bandera_2").attr("src","../img/banderas/"+partido.abreviatura_2+".png");
 		$("#inputApuesta_1").val(partido.apuesta_1);
 		$("#inputApuesta_2").val(partido.apuesta_2);
 		$("#labelGanador_1").text(partido.abreviatura_1);

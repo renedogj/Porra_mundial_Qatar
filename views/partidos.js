@@ -43,12 +43,12 @@ function mostrarPartidosPorGrupos(partidos){
 					$("<div>").addClass("divNombre").text(partido.nombre_1),
 					$("<div>").addClass("divAbreviatura").text(partido.abreviatura_1),
 					$("<div>").addClass("divBandera").append(
-						$("<img>").attr("src","../img/banderas/"+partido.abreviatura_1+".webp")
+						$("<img>").attr("src","../img/banderas/"+partido.abreviatura_1+".png")
 					),
 					$("<div>").addClass("divResultado").text(partido.resultado_1),
 					$("<div>").addClass("divResultado").text(partido.resultado_2),
 					$("<div>").addClass("divBandera").append(
-						$("<img>").attr("src","../img/banderas/"+partido.abreviatura_2+".webp")
+						$("<img>").attr("src","../img/banderas/"+partido.abreviatura_2+".png")
 					),
 					$("<div>").addClass("divAbreviatura").text(partido.abreviatura_2),
 					$("<div>").addClass("divNombre").text(partido.nombre_2),
@@ -90,12 +90,12 @@ function mostrarPartidosPorFecha(partidos){
 			$("<div>").addClass("divNombre").text(partido.nombre_1),
 			$("<div>").addClass("divAbreviatura").text(partido.abreviatura_1),
 			$("<div>").addClass("divBandera").append(
-				$("<img>").attr("src","../img/banderas/"+partido.abreviatura_1+".webp")
+				$("<img>").attr("src","../img/banderas/"+partido.abreviatura_1+".png")
 			),
 			$("<div>").addClass("divResultado").text(partido.resultado_1),
 			$("<div>").addClass("divResultado").text(partido.resultado_2),
 			$("<div>").addClass("divBandera").append(
-				$("<img>").attr("src","../img/banderas/"+partido.abreviatura_2+".webp")
+				$("<img>").attr("src","../img/banderas/"+partido.abreviatura_2+".png")
 			),
 			$("<div>").addClass("divAbreviatura").text(partido.abreviatura_2),
 			$("<div>").addClass("divNombre").text(partido.nombre_2),

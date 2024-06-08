@@ -1,3 +1,7 @@
+.divApuesta h3 {
+	font-size: 24px;
+}
+
 .divApuesta{
 	display: flex;
 	flex-direction: column;
@@ -7,14 +11,15 @@
 }
 
 .divFormApuesta{
-	background-color: rgba(140, 120, 120, 0.4);
+	background-color: var(--third-color);
+	color: var(--third-text-color);
 	width: 40%;
 	margin: 2% auto;
 	padding: 2%;
 	border-radius: 10px;
 	box-shadow: 3px 3px 6px 4px #1C1C1C;
 	display: grid;
-	grid-template-columns: 5fr 60px 1fr 60px 5fr;
+	grid-template-columns: 6fr 55px 2fr 55px 6fr;
 	grid-template-rows: auto;
 	grid-template-areas:
 	"nomAbrev_1 bandera_1 div_vs bandera_2 nomAbrev_2"
@@ -49,8 +54,14 @@
 
 .divInputApuesta input{
 	padding: 1%;
-	max-width: 50px;
+	max-width: 55px;
 	text-align: center;
+	border-radius: 5px;
+}
+
+.divNombre {
+	font-size: 18px;
+	margin: 0 5%;
 }
 
 .nomAbrev_1{
@@ -89,6 +100,7 @@
 .contdown{
 	margin: 2% 0;
 	text-align: center;
+	font-size: 18px;
 }
 
 .button{
