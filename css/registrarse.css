@@ -1,16 +1,39 @@
-.formRegistrarse{
-	width: 50%;
+.contenedorFormRegistrarse{
+	width: 45%;
 	margin: auto;
 }
 
-.formRegistrarse h1{
+.contenedorFormRegistrarse h1{
+	text-align: center;
+	margin: 2% 0 2%;
+	font-size: 36px;
+}
+
+.contenedorFormRegistrarse p{
+	font-size: 18px;
+/*	text-align: center;*/
+margin: 1% 1% 2%;
+}
+
+.formRegistrarse{	
+	background-color: var(--third-color);
+	width: 100%;
+	color: var(--third-text-color);
+	padding: 2% 3% 1%;
+	border-radius: 15px;
+/*	width: 50%;*/
+/*	margin: auto;*/
+}
+
+/*.formRegistrarse h1{
 	text-align: center;
 	margin: 1% 0 2%;
-}
+}*/
 
 .formRegistrarse label{
 	font-size: 1.2em;
 	font-weight: bold;
+	margin-left: 1.5%;
 }
 
 .formRegistrarse input{
@@ -35,18 +58,32 @@
 	font-size: 1.05em;
 }
 
+.formRegistrarse a {
+	color: var(--third-text-color);
+}
+
+.formRegistrarse a:hover{
+	color: var(--main-color);
+}
+
+@media(max-width:1300px){
+	.contenedorFormRegistrarse{
+		width: 50%;
+	}
+}
+
 @media(max-width:900px){
-	.formRegistrarse h1{
+	.contenedorFormRegistrarse h1{
 		font-size: 1.9em;
 		margin: 2% 0 5%;
 	}
-	.formRegistrarse{
+	.contenedorFormRegistrarse{
 		width: 55%;
 	}
 }
 
 @media(max-width:900px){
-	.formRegistrarse{
+	.contenedorFormRegistrarse{
 		width: 60%;
 	}
 	.button{
@@ -61,7 +98,7 @@
 }
 
 @media(max-width:600px){
-	.formRegistrarse{
+	.contenedorFormRegistrarse{
 		width: 70%;
 	}
 	.formRegistrarse label{

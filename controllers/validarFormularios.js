@@ -33,11 +33,16 @@ $(document).ready(() => {
 				minlength: 3,
 				maxlength: 30
 			},
+			inputTelefono:{
+				required: true,
+                number: true,
+                minlength: 9,
+                maxlength: 9
+			},
 			inputPassword:{
 				required: true,
 				minlength: 6,
 				maxlength: 12,	
-				
 			},
 			inputPassword2:{
 				required: true,
@@ -53,6 +58,11 @@ $(document).ready(() => {
 				required: "Es necesario rellenar este campo",
 				minlength: "El nombre tiene que tener un mínimo de 3 caracteres",
 				maxlength: "El nombre solo puede tener un máximo de 30 caracteres"
+			},
+			inputTelefono:{
+				required: "Es necesario rellenar este campo",
+				minlength: "El número de telefono tiene que tener un mínimo de 9 caracteres",
+				maxlength: "El número de telefono solo puede tener un máximo de 9 caracteres"
 			},
 			inputPassword:{
 				required: "Es necesario rellenar este campo",

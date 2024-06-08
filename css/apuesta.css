@@ -1,5 +1,4 @@
 .divApuesta{
-	/*background-color: green;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -8,7 +7,6 @@
 }
 
 .divFormApuesta{
-	/*background-color: blue;*/
 	background-color: rgba(140, 120, 120, 0.4);
 	width: 40%;
 	margin: 2% auto;

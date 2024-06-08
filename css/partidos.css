@@ -22,8 +22,10 @@ h3{
 }
 
 .divPartidosGrupo, .divPartidosFecha{
-	background-color: #BFC9CA;
+/*	background-color: #BFC9CA;*/
+	background-color: var(--third-color);
 	color: #101010;
+	color: var(--third-text-color);
 	width: 100%;
 	padding: 1% 2% 2%;
 	margin: 1% 0 4%;
@@ -42,7 +44,8 @@ h3{
 }
 
 .divContenedorTabla .divPartidos div {
-	background-color: #BFC9CA;
+/*	background-color: #BFC9CA;*/
+	background-color: var(--third-color);
 	border: solid 1px;
 	border-color: #202020;
 	text-align: center;
@@ -81,7 +84,7 @@ h3{
 }
 
 .button:hover{
-	background-color: rgba(150,150,150,0.5);
+	background-color: rgba(150, 150, 150, 0.5);
 }
 
 .button:active{
@@ -103,7 +106,8 @@ h3{
 }
 
 #divTablaPartidosPorFecha {
-	color: #101010;
+/*	color: #101010;*/
+color: var(--third-text-color);
 }
 
 @media(max-width: 900px){

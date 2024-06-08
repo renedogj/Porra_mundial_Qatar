@@ -39,7 +39,7 @@ if(isset($_SESSION["id"])){
 		<div class="div-inicio-titulo">
 			<h1 class="h1-inicio-titulo">Eurocopa 2024</h1>
 			<br>
-			<p>Proyecto desarrollado por Javier Renedo González y Carlos Renedo González</p>
+			<p>Proyecto desarrollado por los hermanos Renedo González</p>
 		</div>
 		<div class="div-inicioSesion">	
 			<?php
