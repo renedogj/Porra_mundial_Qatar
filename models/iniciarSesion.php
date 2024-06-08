@@ -13,6 +13,11 @@ $json = [];
 if(count($usuario) != 0){
 	$json["error"] = false;
 	$usuario = $usuario[0];
+
+	$idUsuario = $usuario["id"];
+
+	$sql = "UPDATE personas SET fecha_inicio_sesion = CURRENT_TIMESTAMP WHERE id='$idUsuario'";
+	$conexion->exec($sql);
 	
 	$_SESSION["id"] = $usuario["id"];
 	$_SESSION["nombre"] = $usuario["nombre"];

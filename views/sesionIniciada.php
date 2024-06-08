@@ -1,5 +1,14 @@
 <div class="sesionIniciada" id="sesionIniciada">
 	<h1>Bienvenido <?php echo $_SESSION["nombre"]?></h1>
-	<h3>Tienes <?php echo $_SESSION["puntuacion"]?> puntos</h3>
+	<?php
+	if ($pagado == 0){
+		echo '<p>Para completar el registro y participar en la porra deberá hacer un <b>bizum de 2€ al 639679097</b> con el concepto:<br><b>"Porra Eurocopa 2024 - correo con el que se ha registrado"</b></p>';
+	}elseif ($pagado > 0 && $pagado < 2){
+
+	}else{
+		echo '<h3>Tienes ' . $_SESSION["puntuacion"] . ' puntos</h3>';
+		echo '<br><h3>Gracias por tu aportación al proyecto misionero de la <a href="https://www.parroquiasanleandro.es/proyecto-misionero-23-24">parroquia San Leandro</a></h3><p>Used ha aportado: ' . $pagado . '</p>';
+	}
+	?>
 	<button class="button" id="bttn-cerrarSesion">Cerrar Sesión</button>
 </div>

@@ -21,10 +21,18 @@
 }
 
 .div-inicio-titulo{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: -50px;
+	z-index: 1;
+}
+
+.div-inicio-titulo img{
+	width: 20%;
+	margin: 2% 0;
 }
 
 .h1-inicio-titulo{
@@ -50,8 +58,12 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.inicioSesion{
+	height: 400px;
+}
 	
-.inicioSesion, .sesionIniciada{
+.inicioSesion, .sesionIniciada{	
 /*	background-color: #BFC9CA;*/
 	background-color:  var(--third-color);
 	color: var(--third-text-color);
@@ -59,7 +71,6 @@
 /*	background-color: rgba(140, 100, 100, 0.5);*/
 /*	background-color: rgba(191, 201, 200, 0.9);*/
 	width: 50%;
-	height: 400px;
 	padding: 3%;
 	display: flex;
 	flex-direction: column;
@@ -73,9 +84,10 @@
 
 .sesionIniciada{
 /*	background-color: rgba(140, 100, 100, 0.5);*/
-	width: 45%;
-	height: 250px;
-	padding: 2.5%;
+	width: 50%;
+	min-width: 300px;
+/*	height: 250px;*/
+	padding: 2.5% 2%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -85,6 +97,14 @@
 	border-radius: 10px;
 	box-shadow: 3px 3px 6px 4px #1C1C1C;
 	text-align: center;
+}
+
+.sesionIniciada h1{
+	padding: 2% 0;
+}
+
+.sesionIniciada p{
+	margin: 10% 1%;
 }
 
 .inicioSesion h1{
@@ -107,12 +127,18 @@
 	border-radius: 5px;
 }
 
-.inicioSesion a {
+.inicioSesion a,
+.sesionIniciada a{
 	color: var(--third-text-color);
 }
 
-.inicioSesion a:hover{
+.inicioSesion a:hover,
+.sesionIniciada a:hover{
 	color: var(--main-color);
+}
+
+.button{
+	padding: 2.5% 3%;
 }
 
 .boton-iniciarsesion{
@@ -154,6 +180,10 @@
 			"barraSuperior"
 			"titulo"
 			"inicioSesion";
+	}
+
+	.div-inicio-titulo{
+		margin-top: 0;
 	}
 
 	.inicioSesion, .sesionIniciada{
