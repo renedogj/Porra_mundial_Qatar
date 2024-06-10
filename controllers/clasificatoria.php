@@ -44,7 +44,7 @@ if(!isset($_SESSION["id"])){
 				</select>
 			</div>
 		</div>
-		<div class="divInput_3_4_puesto">
+		<!-- <div class="divInput_3_4_puesto">
 			<div class="divInputPuesto">
 				<label for="puesto_3">Tercer puesto</label>
 				<select id="puesto_3" name="puesto_3" class="selectPaises">
@@ -57,7 +57,7 @@ if(!isset($_SESSION["id"])){
 					<option>--</option>
 				</select>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<button id="guardarPorraClasificacion" class="button">Guardar</button>
 

@@ -58,7 +58,7 @@ if(fechaInicioCompeticion < new Date().getTime()){
 
 $("#guardarPorraClasificacion").click(() => {
 	if(fechaInicioCompeticion > new Date().getTime()){
-		if(!hayRepetidos($("#puesto_1").val(), $("#puesto_2").val(), $("#puesto_3").val(), $("#puesto_4").val())){
+		if(!hayRepetidos($("#puesto_1").val(), $("#puesto_2").val())){
 			alert("No puedes poner un mismo pais en 2 puestos");
 		}else{
 			$.ajax({
@@ -88,19 +88,9 @@ $("#guardarPorraClasificacion").click(() => {
 	}
 });
 
-function hayRepetidos(val1,val2,val3,val4){
+function hayRepetidos(val1,val2){
 	if(val1 != val2){
-		if(val1 != val3){
-			if(val1 != val4){
-				if(val2 != val3){
-					if(val2 != val4){
-						if(val3 != val4){
-							return true;
-						}
-					}
-				}
-			}
-		}
+		return true;
 	}
 	return false;
 }

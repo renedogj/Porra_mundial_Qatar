@@ -33,10 +33,8 @@
 				<b>Pestaña "Vota el ganador":</b> profetiza quienes se llevarán los cuatro primeros puestos. Esta votación se cierra a las 21:00 del viernes 14 de junio, al iniciar el primer partido. Puntos que puedes ganar:
 				<ul>
 					<li>20 puntos - 1er puesto</li>
-					<li>15 puntos - 2do puesto</li>
-					<li>10 puntos - 3er puesto</li>
-					<li>05 puntos - 4to puesto</li>
-					<li>01 puntos - adivinas equipo pero fallas posición</li>
+					<li>10 puntos - 2do puesto</li>
+					<li>2 puntos - adivinas equipo pero fallas posición</li>
 				</ul>
 			</li>
 			<li>
@@ -63,7 +61,6 @@
 					<li>Octavos: x2</li>
 					<li>Cuartos: x3</li>
 					<li>Semifinal: x4</li>
-					<li>Tercer y cuarto puesto: x5</li>
 					<li>Final: x6</li>
 				</ul>
 			</li>

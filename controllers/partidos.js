@@ -16,8 +16,8 @@ $.ajax({
 		}
 		mostrarPartidosPorGrupos(partidosGrupos);
 		mostrarPartidosPorFecha(partidos);
-		$("#divPartidosPorGrupos").css("display","none");
-		// $("#divPartidosPorFecha").css("display","none");
+		// $("#divPartidosPorGrupos").css("display","none");
+		$("#divPartidosPorFecha").css("display","none");
 		location.assign("#divPartidosGrupo-2");
 	},
 	error(xhr,status,error){
