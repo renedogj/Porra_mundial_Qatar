@@ -24,7 +24,7 @@ h3{
 .divPartidosGrupo, .divPartidosFecha{
 /*	background-color: #BFC9CA;*/
 	background-color: var(--third-color);
-	color: #101010;
+/*	color: #101010;*/
 	color: var(--third-text-color);
 	width: 100%;
 	padding: 1% 2% 2%;

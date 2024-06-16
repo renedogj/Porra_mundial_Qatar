@@ -55,11 +55,14 @@
 }
 
 #divClasificatoriaApuestas{
+/*	background-color: var(--third-color);*/
+/*	color: var(--third-text-color);*/
 	width: 85%;
 	margin: 1% auto;
 	padding: 1% 0 5%;
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+/*	border-radius: 18px;*/
 }
 
 #divClasificatoriaApuestas .divTh,

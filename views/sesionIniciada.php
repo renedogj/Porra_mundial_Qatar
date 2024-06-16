@@ -8,7 +8,7 @@
 
 	}else{
 		echo '<h3>Tienes ' . $_SESSION["puntuacion"] . ' puntos</h3>';
-		echo '<br><h3>Gracias por tu aportación al proyecto misionero de la <a href="https://www.parroquiasanleandro.es/proyecto-misionero-23-24">parroquia San Leandro</a></h3><p>Used ha aportado: ' . $pagado . '</p>';
+		echo '<br><h3>Gracias por tu aportación al proyecto misionero de la <a href="https://www.parroquiasanleandro.es/proyecto-misionero-23-24">parroquia San Leandro</a></h3><p>Usted ha aportado: ' . $pagado . '</p>';
 	}
 	?>
 	<button class="button" id="bttn-cerrarSesion">Cerrar Sesión</button>
