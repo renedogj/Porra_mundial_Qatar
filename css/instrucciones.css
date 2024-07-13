@@ -4,13 +4,26 @@
 	text-align: justify;
 }
 
+.divContenidoIntrucciones a{
+	color: blue;
+}
+
 .divContenidoIntrucciones a:hover{
-	color: #EEEEE4;
+	color: var(--second-text-color);
 }
 
 .textoIncial{
 	font-weight: bold;
 	font-size: 1.1em;
+}
+
+.pPremio{
+	width: 100%;
+	color: red;
+	padding: 2.5% 1%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.8em;
 }
 
 ol{
@@ -23,10 +36,10 @@ ol li{
 }
 
 ul{
-	padding: 1%;
+	padding: 1% 3%;
 }
 
 ul li{
 	list-style-position: outside;
-	padding: 1% 2%;
+	padding: 0.5% 2%;
 }

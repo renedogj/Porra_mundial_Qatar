@@ -10,8 +10,10 @@
 }
 
 .div-barraSuperior{
+/*	background-color: #143CBD;*/
+	background-color: var(--main-color);
 	grid-area: barraSuperior;
-	padding: 1% 2%;
+	padding: 0 2%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -19,10 +21,18 @@
 }
 
 .div-inicio-titulo{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: -50px;
+	z-index: 1;
+}
+
+.div-inicio-titulo img{
+	width: 20%;
+	margin: 2% 0;
 }
 
 .h1-inicio-titulo{
@@ -30,7 +40,7 @@
 	grid-area: titulo;
 	font-size: 4em;
 	font-family: Century;
-	color: #EEEEE4;
+/*	color: var(--main-text-color);*/
 	padding: 0 1%;
 }
 
@@ -39,6 +49,7 @@
 	text-align: center;
 	grid-area: titulo;
 	font-size: 1.1em;
+/*	color: var(--main-text-color);*/
 }
 
 .div-inicioSesion{
@@ -47,35 +58,53 @@
 	justify-content: center;
 	align-items: center;
 }
-	
-.inicioSesion, .sesionIniciada{
-	background-color: rgba(140, 100, 100, 0.5);
-	width: 45%;
+
+.inicioSesion{
 	height: 400px;
+}
+	
+.inicioSesion, .sesionIniciada{	
+/*	background-color: #BFC9CA;*/
+	background-color:  var(--third-color);
+	color: var(--third-text-color);
+/*	color: #101010;*/
+/*	background-color: rgba(140, 100, 100, 0.5);*/
+/*	background-color: rgba(191, 201, 200, 0.9);*/
+	width: 50%;
 	padding: 3%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 	font-weight: 500;
-	color: black;
+/*	color: black;*/
 	border-radius: 10px;
 	box-shadow: 3px 3px 6px 4px #1C1C1C;
 }
 
 .sesionIniciada{
-	background-color: rgba(140, 100, 100, 0.5);
-	width: 45%;
-	height: 250px;
-	padding: 2.5%;
+/*	background-color: rgba(140, 100, 100, 0.5);*/
+	width: 50%;
+	min-width: 300px;
+/*	height: 250px;*/
+	padding: 2.5% 2%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	color: #EEEEE4;
+/*	color: #EEEEE4;*/
+	color: var(--third-text-color);
 	border-radius: 10px;
 	box-shadow: 3px 3px 6px 4px #1C1C1C;
 	text-align: center;
+}
+
+.sesionIniciada h1{
+	padding: 2% 0;
+}
+
+.sesionIniciada p{
+	margin: 10% 1%;
 }
 
 .inicioSesion h1{
@@ -96,6 +125,20 @@
 	border: solid;
 	border-width: 2px;
 	border-radius: 5px;
+}
+
+.inicioSesion a,
+.sesionIniciada a{
+	color: var(--third-text-color);
+}
+
+.inicioSesion a:hover,
+.sesionIniciada a:hover{
+	color: var(--main-color);
+}
+
+.button{
+	padding: 2.5% 3%;
 }
 
 .boton-iniciarsesion{
@@ -137,6 +180,10 @@
 			"barraSuperior"
 			"titulo"
 			"inicioSesion";
+	}
+
+	.div-inicio-titulo{
+		margin-top: 0;
 	}
 
 	.inicioSesion, .sesionIniciada{

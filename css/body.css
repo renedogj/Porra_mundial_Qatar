@@ -1,3 +1,15 @@
+:root {
+	--main-color: #143CBD;
+	--second-color: #F2F3F4;
+	--third-color: #000D40;
+	--main-text-color: #EEEEE4;
+	--second-text-color: #1C1C1C;
+	--third-text-color: #EEEEE4;
+	
+/*	--menu-color: #143CBD;*/
+/*	--menu-text-color: #EEEEE4;*/
+}
+
 *{
 	box-sizing: border-box;
 	margin: 0;
@@ -5,8 +17,14 @@
 }
 
 body{
-	background-color: #8a1538;
-	color: #EEEEE4;
+	background-color: var(--second-color);
+	color: var(--second-text-color);
+/*	background-color: #143CBD;*/
+/*	background-color: #BFC9CA;*/
+/*	background-color: #F2F3F4;*/
+/*	background-color: #3498DB;*/
+/*	color: #EEEEE4;*/
+/*	color: #BFC9CA;*/
 }
 
 body,html{

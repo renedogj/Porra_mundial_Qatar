@@ -1,16 +1,25 @@
 <?php
 session_start();
-if(isset($_SESSION["id"])){
+if(isset($_SESSION["token"]) && isset($_SESSION["id"])){
+	$token = $_SESSION["token"];
 	$id = $_SESSION["id"];
 	include_once "db/db.php";
 
-	$sql = "SELECT nombre,puntuacion,email from personas where id=$id";
+	$sql = "SELECT 
+		nombre,
+		puntuacion,
+		email,
+		email_verificado,
+		pagado
+		from personas where id= $id and user_token = '$token'";
 
 	$persona = obtenerArraySQL($conexion, $sql)[0];
 
 	$_SESSION["nombre"] = $persona["nombre"];
 	$_SESSION["puntuacion"] = $persona["puntuacion"];
 	$_SESSION["email"] = $persona["email"];
+	$emailVerificado = $persona["email_verificado"];
+	$pagado = $persona["pagado"];
 }
 ?>
 <!DOCTYPE html>
@@ -18,11 +27,10 @@ if(isset($_SESSION["id"])){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mundial de Qatar</title>
+	<title>Eurocopa 2024</title>
 	<meta name=author content="Javier Renedo">
 
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="icon" type="image/png" href="img/favicon-euro-2024.png">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
@@ -37,9 +45,10 @@ if(isset($_SESSION["id"])){
 			<nav class="nav-menu" id="menu"></nav>
 		</div>
 		<div class="div-inicio-titulo">
-			<h1 class="h1-inicio-titulo">Mundial de Qatar 2022</h1>
+			<img src="img/logo-euro-2024.png">
+			<h1 class="h1-inicio-titulo">Eurocopa 2024</h1>
 			<br>
-			<p>Proyecto desarrollado por Javier Renedo González y Carlos Renedo González</p>
+			<p>Proyecto desarrollado por los hermanos Renedo González</p>
 		</div>
 		<div class="div-inicioSesion">	
 			<?php

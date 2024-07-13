@@ -4,7 +4,7 @@ $("#formRegistrarse").submit(() => {
 		datosRegistrarse["email"] = $("#inputEmail").val();
 		datosRegistrarse["nombre"] = $("#inputNombre").val();
 		datosRegistrarse["password"] = $("#inputPassword").val();
-		datosRegistrarse["fechaNacimiento"] = $("#inputFechaNacimiento").val();
+		datosRegistrarse["telefono"] = $("#inputTelefono").val();
 
 		$.ajax({
 			method: "POST",

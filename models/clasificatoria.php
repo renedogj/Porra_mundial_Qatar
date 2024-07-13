@@ -1,12 +1,24 @@
 <?php
 session_start();
-$id = $_SESSION["id"];
+if(isset($_SESSION["token"]) && isset($_SESSION["id"])){
+	$token = $_SESSION["token"];
+	$id = $_SESSION["id"];
 
-include_once "../db/db.php";
+	include_once "../db/db.php";
 
-$sql = "SELECT puesto_1, puesto_2, puesto_3, puesto_4 from apuestas_clasificacion where id_persona = $id";
+	$sql = "SELECT id FROM personas WHERE user_token = '$token'";
 
-$array = obtenerArraySQL($conexion, $sql);
+	if(obtenerArraySQL($conexion, $sql)[0]["id"] == $id){
+		$sql = "SELECT puesto_1, puesto_2, puesto_3, puesto_4 
+		from apuestas_clasificacion where id_persona = $id";
 
-echo json_encode($array);
+		$array = obtenerArraySQL($conexion, $sql);
+
+		echo json_encode($array);
+	}else{
+		header('HTTP/1.1 401 Unauthorized', true, 401);
+	}
+}else{
+	header('HTTP/1.1 401 Unauthorized', true, 401);
+}
 ?>
